@@ -1,7 +1,9 @@
+// app.js
+
 const express = require('express');
 const bodyParser =require('body-parser');
 const path = require('path');
-const route = require('./routes');
+const route = require('./routes/route');
 
 const app = express();
 const port = 9997;

@@ -1,3 +1,5 @@
+// route.js
+
 const express = require('express');
 const router = express.Router();
 const path = require('path');
@@ -11,7 +13,7 @@ router.use(express.static(path.join(__dirname, '..', 'public')));
 
 // 라우트 설정
 router.get('/', (req, res) => {
-  res.render('index'); // 'views' vhfejdml 'index.html' 파일을 렌더링
+  res.sendFile(path.join(__dirname, '..', 'public', 'views', 'index.html')); // 수정
 })
 
 module.exports = router;
