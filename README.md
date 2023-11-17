@@ -14,9 +14,10 @@
 | 🐛     | `:bug: [Fix]`                   | 버그 수정                    |
 | 🩹     | `:adhesive_bandage: [Resolve]`  | 간단한 문제 해결             |
 | ✏️     | `:pencil2: [Typo]`              | 오타 수정                    |
-| 📝     | `:memo: [Modify]`               | 코드 추가/ 수정              |
+| 📝     | `:memo: [Modify]`               | 문서 추가/수정              |
 | 💩     | `:poop: [Bad]`                  | 개선이 필요한 bad code       |
-| 🔥     | `:fire: [RemoveC]`              | 코드 제거                    |
+| 🔥     | `:fire: [RemoveC]`              | 코드 제거                   |
 | 🗑️     | `:wastebasket: [RemoveF]`       | 파일 삭제                    |
 | 🚑️    | `:ambulance: [Hotfix]`          | 긴급 수정                    |
-| 🚀     | `:rocket: [Release]`            | 배포                         |
+| 🚀     | `:rocket: [Release]`            | 배포                     ``    | 
+| 💡     | `:bulb: [comments]`            | 주석 추가/수정                 | 
