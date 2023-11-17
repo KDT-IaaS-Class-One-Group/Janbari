@@ -20,4 +20,3 @@
 | 🗑️     | `:wastebasket:` RemoveF:       | 파일 삭제                    |
 | 🚑️    | `:ambulance:` Hotfix:          | 긴급 수정                    |
 | 🚀     | `:rocket:` Release:            | 배포                         |
-
