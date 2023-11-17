@@ -13,7 +13,7 @@
   justify-content: space-evenly;
 }
 
-/* 너비, 높이 */
+/* 너비, 높이, 여백 */
 .w-200px {width: 200px;}
 .h-200px {height: 200px;}
 .w-45v {width: 45vw;}
@@ -21,13 +21,19 @@
 .h-20v {height: 20vh;}
 .h-70v {height: 70vh;}
 .border {border-right: solid black 2px;}
+.left-5v {left: 5vw;}
+.right-5v {right: 5vw;}
+.top-5v {top:5vw;}
+.bottom-5v {bottom:5vw;}
 
 /* 색상 */
 .bgc-w{background-color: white;}
-.bgcD9{background-color: #D9D9D9;}
+.bgc-D9{background-color: #D9D9D9;}
 
 /* 위치 */
 .display-f {display: flex;}
+.p-rel {position: relative;}
+.p-abs {position: absolute;}
 .flex-column { flex-direction: column;}
 .justify-center { justify-content: center;}
 .align-center { align-items: center;}
