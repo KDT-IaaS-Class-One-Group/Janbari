@@ -19,5 +19,6 @@
 | 🔥     | `:fire: [RemoveC]`              | 코드 제거                   |
 | 🗑️     | `:wastebasket: [RemoveF]`       | 파일 삭제                    |
 | 🚑️    | `:ambulance: [Hotfix]`          | 긴급 수정                    |
-| 🚀     | `:rocket: [Release]`            | 배포                     ``    | 
+| 🚀     | `:rocket: [Release]`            | 배포                        | 
 | 💡     | `:bulb: [comments]`            | 주석 추가/수정                 | 
+| 💄    | `:lipstick: [style]`            | UI/스타일 파일 추가/수정        | 
