@@ -1,29 +1,30 @@
 {
   "잔잔바리/호녕": {
     "name": "변호녕",
-    "personal_site": "",
+    "personal_site": "https://github.com/dev-honing",
     "bio": "",
-    "contact": "",
-    "current_project": ""
+    "contact": "dev.honing@gmail.com",
+    "current_project": "KDT-IaaS-Class-One-Group/Plan-Trek"
   },
   "잔잔바리/승민": {
     "name": "유승민",
-    "personal_site": "",
+    "personal_site": "https://github.com/Yusmin97",
     "bio": "",
-    "contact": "",
-    "current_project": ""
+    "contact": "tmdamsi97@gmail.com",
+    "current_project": "https://github.com/Yusmin97/petCheck "
   },
   "잔잔바리/사무엘": {
     "name": "소사무엘",
-    "personal_site": "",
+    "personal_site": "https://github.com/samuel21695",
     "bio": "",
-    "contact": "",
-    "current_project": ""
+    "contact": "samuelso21695@gmail.com",
+    "current_project": "https://github.com/samuel21695/Rest-SPA-Application"
   },
   "잔잔바리/은정": {
     "name": "이은정",
-    "personal_site": "",
-    "contact": "",
-    "current_project": ""
+    "personal_site": "https://github.com/LeeEunJeong0731",
+    "bio": "",
+    "contact": "eunjeong990731@gmail.com",
+    "current_project": "https://github.com/LeeEunJeong0731/gabojago"
   }
 }
