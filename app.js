@@ -13,6 +13,7 @@ app.use(express.urlencoded({extended: true}));
 
 // app.use(express.static(path.join(__dirname, '..', 'public', 'views')));
 app.use('/', route);
+app.use('/json', route);
 
 
 app.listen(port, () => {
