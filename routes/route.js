@@ -33,4 +33,22 @@ router.get('/', (req, res) => {
   })
 })
 
+router.get('/json', (req, res) => {
+  const jsonFilePath = path.join(__dirname, '..', 'models', 'info.json');
+
+  fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('파일 로딩 실패', err);
+      return;
+    }
+    
+    // JSON 데이터를 파싱
+    const jsonData = JSON.parse(data);
+
+  res.setHeader('Content-Type', 'applciation/json');  
+  res.send(jsonData);
+
+  });
+})
+
 module.exports = router;
