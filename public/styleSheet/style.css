@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* 너비, 높이, 여백 */
+.width-200px {width: 200px;}
+.height-200px {height: 200px;}
+.width-45vw {width: 45vw;}
+.width-90vw {width: 90vw;}
+.height-20vh {height: 20vh;}
+.height-70vh {height: 70vh;}
+.border-right {border-right: solid black 2px;}
+.left-5vw {left: 5vw;}
+.right-5vw {right: 5vw;}
+.top-5vw {top:5vw;}
+.bottom-5vw {bottom:5vw;}
+
+/* 색상 */
+.bgc-white{background-color: white;}
+.bgc-D9D9D9{background-color: #D9D9D9;}
+
+/* 위치 */
+.display-flex {display: flex;}
+.position-rel {position: relative;}
+.position-abs {position: absolute;}
+.flex-column { flex-direction: column;}
+.justify-center { justify-content: center;}
+.align-center { align-items: center;}
