@@ -5,7 +5,7 @@ const router = express.Router();
 const path = require('path');
 
 // 정적 파일 서빙 설정
-router.use(express.static(path.join(__dirname, '..', 'public')));
+router.use('/public',express.static(path.join(__dirname, '..', 'public')));
 
 // 뷰 엔진 설정
 // router.set('views', path.join(__dirname, 'views'));
