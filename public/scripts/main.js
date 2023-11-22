@@ -52,33 +52,22 @@ fetch('/json')
   })
   .catch((error) => console.error('Error fetching JSON', error));
 
-  // 스크롤 이벤트를 위한 영역 배치 재설정 로직
-  // 스크롤 이벤트 핸들러
-  const handleScroll = () => {
-    // 현재 스크롤 위치
-    const scrollTop = container.scrollTop;
+// 초기 위치 설정 함수
+const setMemberPositions = () => {
+  // container 높이
+  const containerHeight = container.clientHeight;
 
-    // container 높이와 스크롤 가능한 전체 높이
-    const containerHeight = container.clientHeight;
-    const containerScrollHeight = container.scrollHeight;
+  // 각 팀 멤버 간격 계산
+  const sectionHeight = containerHeight / 4;
 
-    // 팀 멤버 각각의 위치를 재설정
-    const hoPosition = scrollTop / 4 * 1;
-    const yuPosition = scrollTop / 4 * 2;
-    const soPosition = scrollTop / 4 * 3;
-    const leePosition = scrollTop / 4 * 4;
-  
-    // 각 팀 멤버의 위치 설정
-    ho.style.top = `${hoPosition}vh`;
-    yu.style.top = `${yuPosition}vh`;
-    so.style.top = `${soPosition}vh`;
-    lee.style.top = `${leePosition}vh`;
-  };
-  
-  // 컨테이너에 스크롤 이벤트 리스너 추가
-  container.addEventListener('scroll', handleScroll);
+  // 팀 멤버 각각의 초기 위치 설정
+  ho.style.top = `${sectionHeight * 0}vh`; // 1/4 지점
+  yu.style.top = `${sectionHeight * 1}vh`; // 2/4 지점
+  so.style.top = `${sectionHeight * 2}vh`; // 3/4 지점
+  lee.style.top = `${sectionHeight * 3}vh`; // 4/4 지점
+};
 
 // 초기화할 때 한 번 호출하여 초기 위치 설정
-handleScroll();
+setMemberPositions();
 
   
