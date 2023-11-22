@@ -14,9 +14,11 @@
 
 /* 높이 */
 .height-20vh {height: 20vh;}
+.height-30vh {height: 30vh;}
 .height-70vh {height: 70vh;}
 .height-100vh {height: 100vh;}
 .height-200px {height: 200px;}
+.height-280vh {height: 280vh;}
 
 /* 여백 */
 .top-5vw {top:5vw;}
@@ -24,6 +26,7 @@
 .left-5vw {left: 5vw;}
 .right-5vw {right: 5vw;}
 .margin-top-5px {margin-top: 5px;}
+.margin-top-30vh {margin-top: 30vh;}
 
 /* 선 */
 .border-right {border-right: solid black 2px;}
@@ -32,10 +35,15 @@
 .display-flex {display: flex;}
 .position-relative {position: relative;}
 .position-absolute {position: absolute;}
+.position-fixed {position: fixed;}
 .flex-column { flex-direction: column;}
 .justify-center { justify-content: center;}
 .justify-spaceEvenly {justify-content: space-evenly;}
+.justify-flexStart {justify-content: flex-start;}
 .align-center { align-items: center;}
+
+/* z-index */
+.z-index-1000 {z-index: 1000;}
 
 /* 색상 */
 .bgc-white {background-color: white;}
@@ -47,7 +55,7 @@
 .font-100px {font-size: 100px;}
 
 .line-height-75 {line-height: 0.75;} /* 줄 높이 */
-.fontColor-black {font: #000;}
+.fontColor-black {color: #000;}
 .text-shadow {text-shadow: -1px -1px 0 #FFA500, 0px -1px 0 #FFA500, 1px -1px 0 #FFA500,
   -1px 0px 0 #FFA500, 0px 0px 0 #FFA500, 1px 0px 0 #FFA500, -1px 1px 0 #FFA500,
   0px 1px 0 #FFA500, 1px 1px 0 #FFA500, -1px -1px 6px #121212,
@@ -58,6 +66,7 @@
 
 /* overflow */
 .overflow-hidden {overflow: hidden;}
+.overflow-y-auto {overflow-y: auto;}
 
 /* 애니메이션 */
 .animation-fadeIn {animation: fadeIn 1s ease-in-out;}
