@@ -28,8 +28,6 @@
 .margin-top-5px {margin-top: 5px;}
 .margin-top-30vh {margin-top: 30vh;}
 
-/* 선 */
-.border-right {border-right: solid black 2px;}
 
 /* 위치 */
 .display-flex {display: flex;}
@@ -73,8 +71,14 @@
 .animation-bounce {  animation: bounce 1s ease-in-out infinite;
 }
 
-/* keyframes */
+/* 선 */
+.border {  
+  border-right: 5px solid;
+  border-left: 5px solid;
+  border-image: linear-gradient(to bottom, #FF4500, #FFD700) 1;
+}
 
+/* keyframes */
 @keyframes fadeIn {
   from {
     opacity: 0;
