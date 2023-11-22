@@ -1,7 +1,11 @@
+// main.js
+
 const ho = document.getElementById('ho');
 const yu = document.getElementById('yu');
 const so = document.getElementById('so');
 const lee = document.getElementById('lee');
+const container = document.getElementById('container');
+const root = document.getElementById('root');
 
 fetch('/json')
   .then((response) => response.json())
@@ -47,3 +51,34 @@ fetch('/json')
     }
   })
   .catch((error) => console.error('Error fetching JSON', error));
+
+  // 스크롤 이벤트를 위한 영역 배치 재설정 로직
+  // 스크롤 이벤트 핸들러
+  const handleScroll = () => {
+    // 현재 스크롤 위치
+    const scrollTop = container.scrollTop;
+
+    // container 높이와 스크롤 가능한 전체 높이
+    const containerHeight = container.clientHeight;
+    const containerScrollHeight = container.scrollHeight;
+
+    // 팀 멤버 각각의 위치를 재설정
+    const hoPosition = scrollTop / 4 * 1;
+    const yuPosition = scrollTop / 4 * 2;
+    const soPosition = scrollTop / 4 * 3;
+    const leePosition = scrollTop / 4 * 4;
+  
+    // 각 팀 멤버의 위치 설정
+    ho.style.top = `${hoPosition}vh`;
+    yu.style.top = `${yuPosition}vh`;
+    so.style.top = `${soPosition}vh`;
+    lee.style.top = `${leePosition}vh`;
+  };
+  
+  // 컨테이너에 스크롤 이벤트 리스너 추가
+  container.addEventListener('scroll', handleScroll);
+
+// 초기화할 때 한 번 호출하여 초기 위치 설정
+handleScroll();
+
+  
