@@ -58,16 +58,14 @@ const setMemberPositions = () => {
   const containerHeight = container.clientHeight;
 
   // 각 팀 멤버 간격 계산
-  const sectionHeight = containerHeight / 4;
+  const sectionHeight = containerHeight / 5;
 
   // 팀 멤버 각각의 초기 위치 설정
-  ho.style.top = `${sectionHeight * 0}vh`; // 1/4 지점
-  yu.style.top = `${sectionHeight * 1}vh`; // 2/4 지점
-  so.style.top = `${sectionHeight * 2}vh`; // 3/4 지점
-  lee.style.top = `${sectionHeight * 3}vh`; // 4/4 지점
+  ho.style.top = `${sectionHeight * 2}vh`; // 2/5 지점
+  yu.style.top = `${sectionHeight * 3}vh`; // 3/5 지점
+  so.style.top = `${sectionHeight * 4}vh`; // 4/5 지점
+  lee.style.top = `${sectionHeight * 5}vh`; // 5/5 지점
 };
 
 // 초기화할 때 한 번 호출하여 초기 위치 설정
-setMemberPositions();
-
-  
+setMemberPositions();  

@@ -18,7 +18,7 @@
 .height-70vh {height: 70vh;}
 .height-100vh {height: 100vh;}
 .height-200px {height: 200px;}
-.height-280vh {height: 280vh;}
+.height-350vh {height: 350vh;}
 
 /* 여백 */
 .top-5vw {top:5vw;}
@@ -26,6 +26,7 @@
 .left-5vw {left: 5vw;}
 .right-5vw {right: 5vw;}
 .margin-top-5px {margin-top: 5px;}
+.margin-top-5vh {margin-top: 5vh;}
 .margin-top-30vh {margin-top: 30vh;}
 
 
@@ -43,10 +44,11 @@
 /* z-index */
 .z-index-1000 {z-index: 1000;}
 
-/* 색상 */
+/* 배경색 */
 .bgc-white {background-color: white;}
 .bgc-D9D9D9 {background-color: #D9D9D9;}
 .bgc-222 {background-color: #222;}
+.bgc-001F3F {background-color: rgba(0, 31, 63, 0.02);}
 
 /* 폰트 */
 .font-Coop {font-family: "Coop";}
@@ -72,10 +74,13 @@
 }
 
 /* 선 */
-.border {  
+.border-side {  
   border-right: 5px solid;
   border-left: 5px solid;
   border-image: linear-gradient(to bottom, #FF4500, #FFD700) 1;
+}
+.border-square {
+  border: 3px solid #1E3C68;
 }
 
 /* keyframes */
