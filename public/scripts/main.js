@@ -99,12 +99,18 @@ const observer = new IntersectionObserver((entries) => {
 
         // container에 새로운 div 추가
         container.appendChild(jsonContainer);
+
+        // ho를 blur 처리
+        ho.style.filter = 'blur(5px)';  // 원하는 흐림 정도로 설정
       }
     } else {
       // id 엘리먼트가 보이지 않으면 생성한 div 삭제
       if (jsonContainer) {
         container.removeChild(jsonContainer);
         jsonContainer = null; // 변수 초기화
+
+        // ho의 blur 처리 해제
+        ho.style.filter = 'none';
       }
     }
   });
