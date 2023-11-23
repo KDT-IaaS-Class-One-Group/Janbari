@@ -75,39 +75,44 @@ fetch('/json')
   // 새로운 div를 저장할 변수
   let jsonContainer; 
   
-  // IntersectionObserver 설정
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      // id 엘리먼트가 화면에 보일 때
-      if (entry.isIntersecting) {
-        // id 엘리먼트가 없으면 새로운 div 생성
-        if (!jsonContainer) {
-          jsonContainer = document.createElement('div');
-          jsonContainer.id = 'json-container';
-          jsonContainer.style.position = 'fixed';
-          jsonContainer.style.width = '80%';
-          jsonContainer.style.height = '80%';
-          jsonContainer.style.maxWidth = '500px';
-          jsonContainer.style.maxHeight = '500px';
-          jsonContainer.style.background = '#fff';
-          jsonContainer.style.border = '2px solid #ccc';
-          jsonContainer.style.padding = '20px';
-          jsonContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
-          jsonContainer.style.zIndex = '1000';
-          jsonContainer.style.overflowY = 'auto';
-  
-          // container에 새로운 div 추가
-          container.appendChild(jsonContainer);
-        }
-      } else {
-        // id 엘리먼트가 보이지 않으면 생성한 div 삭제
-        if (jsonContainer) {
-          container.removeChild(jsonContainer);
-          jsonContainer = null; // 변수 초기화
-        }
+// IntersectionObserver 설정
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // id 엘리먼트가 화면에 보일 때
+    if (entry.isIntersecting) {
+      // id 엘리먼트가 없으면 새로운 div 생성
+      if (!jsonContainer) {
+        jsonContainer = document.createElement('div');
+        jsonContainer.id = 'json-container';
+        jsonContainer.style.position = 'fixed';
+        jsonContainer.style.width = '80%';
+        jsonContainer.style.height = '80%';
+        jsonContainer.style.maxWidth = '500px';
+        jsonContainer.style.maxHeight = '500px';
+        jsonContainer.style.background = '#fff';
+        jsonContainer.style.border = '2px solid #ccc';
+        jsonContainer.style.padding = '20px';
+        jsonContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+        jsonContainer.style.zIndex = '1000';
+        jsonContainer.style.overflowY = 'auto';
+
+        // 중앙 정렬을 위해 top, left 설정
+        jsonContainer.style.top = '50%';
+        jsonContainer.style.left = '50%';
+        jsonContainer.style.transform = 'translate(-50%, -50%)';
+
+        // container에 새로운 div 추가
+        container.appendChild(jsonContainer);
       }
-    });
-  }, { threshold: 0.5 }); // 옵션: 화면에 50% 이상 보일 때
-  
-  // Observer를 id 엘리먼트에 연결
-  observer.observe(ho);
+    } else {
+      // id 엘리먼트가 보이지 않으면 생성한 div 삭제
+      if (jsonContainer) {
+        container.removeChild(jsonContainer);
+        jsonContainer = null; // 변수 초기화
+      }
+    }
+  });
+}, { threshold: 0.5 }); // 옵션: 화면에 50% 이상 보일 때
+
+// Observer를 id 엘리먼트에 연결
+observer.observe(ho);
