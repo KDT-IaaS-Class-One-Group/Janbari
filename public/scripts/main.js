@@ -71,10 +71,9 @@ fetch('/json')
   // 초기화할 때 한 번 호출하여 초기 위치 설정
   setMemberPositions();  
   
-  // 스크롤 이벤트 구현 로직
-  // 새로운 div를 저장할 변수
-  let jsonContainer; 
-  
+// 스크롤 이벤트 구현 로직
+let jsonContainer;
+
 // IntersectionObserver 설정
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -85,13 +84,10 @@ const observer = new IntersectionObserver((entries) => {
         jsonContainer = document.createElement('div');
         jsonContainer.id = 'json-container';
         jsonContainer.style.position = 'fixed';
-        jsonContainer.style.width = '80%';
-        jsonContainer.style.height = '80%';
-        jsonContainer.style.maxWidth = '500px';
-        jsonContainer.style.maxHeight = '500px';
-        jsonContainer.style.background = '#fff';
+        jsonContainer.style.width = '70vw';
+        jsonContainer.style.height = '70vh';
+        jsonContainer.style.background = '#222';
         jsonContainer.style.border = '2px solid #ccc';
-        jsonContainer.style.padding = '20px';
         jsonContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
         jsonContainer.style.zIndex = '1000';
         jsonContainer.style.overflowY = 'auto';
