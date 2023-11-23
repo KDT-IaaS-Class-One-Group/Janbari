@@ -52,20 +52,62 @@ fetch('/json')
   })
   .catch((error) => console.error('Error fetching JSON', error));
 
-// 초기 위치 설정 함수
-const setMemberPositions = () => {
-  // container 높이
-  const containerHeight = container.clientHeight;
-
-  // 각 팀 멤버 간격 계산
-  const sectionHeight = containerHeight / 5;
-
-  // 팀 멤버 각각의 초기 위치 설정
-  ho.style.top = `${sectionHeight * 2}vh`; // 2/5 지점
-  yu.style.top = `${sectionHeight * 3}vh`; // 3/5 지점
-  so.style.top = `${sectionHeight * 4}vh`; // 4/5 지점
-  lee.style.top = `${sectionHeight * 5}vh`; // 5/5 지점
-};
-
-// 초기화할 때 한 번 호출하여 초기 위치 설정
-setMemberPositions();  
+  
+  // 초기 위치 설정 함수
+  const setMemberPositions = () => {
+    // container 높이
+    const containerHeight = container.clientHeight;
+    
+    // 각 팀 멤버 간격 계산
+    const sectionHeight = containerHeight / 5;
+    
+    // 팀 멤버 각각의 초기 위치 설정
+    ho.style.top = `${sectionHeight * 2}vh`; // 2/5 지점
+    yu.style.top = `${sectionHeight * 3}vh`; // 3/5 지점
+    so.style.top = `${sectionHeight * 4}vh`; // 4/5 지점
+    lee.style.top = `${sectionHeight * 5}vh`; // 5/5 지점
+  };
+  
+  // 초기화할 때 한 번 호출하여 초기 위치 설정
+  setMemberPositions();  
+  
+  // 스크롤 이벤트 구현 로직
+  // 새로운 div를 저장할 변수
+  let jsonContainer; 
+  
+  // IntersectionObserver 설정
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      // id 엘리먼트가 화면에 보일 때
+      if (entry.isIntersecting) {
+        // id 엘리먼트가 없으면 새로운 div 생성
+        if (!jsonContainer) {
+          jsonContainer = document.createElement('div');
+          jsonContainer.id = 'json-container';
+          jsonContainer.style.position = 'fixed';
+          jsonContainer.style.width = '80%';
+          jsonContainer.style.height = '80%';
+          jsonContainer.style.maxWidth = '500px';
+          jsonContainer.style.maxHeight = '500px';
+          jsonContainer.style.background = '#fff';
+          jsonContainer.style.border = '2px solid #ccc';
+          jsonContainer.style.padding = '20px';
+          jsonContainer.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+          jsonContainer.style.zIndex = '1000';
+          jsonContainer.style.overflowY = 'auto';
+  
+          // container에 새로운 div 추가
+          container.appendChild(jsonContainer);
+        }
+      } else {
+        // id 엘리먼트가 보이지 않으면 생성한 div 삭제
+        if (jsonContainer) {
+          container.removeChild(jsonContainer);
+          jsonContainer = null; // 변수 초기화
+        }
+      }
+    });
+  }, { threshold: 0.5 }); // 옵션: 화면에 50% 이상 보일 때
+  
+  // Observer를 id 엘리먼트에 연결
+  observer.observe(ho);
