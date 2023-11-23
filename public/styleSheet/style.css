@@ -70,6 +70,7 @@
 
 /* 애니메이션 */
 .animation-fadeIn {animation: fadeIn 1s ease-in-out;}
+.animation-fadeOut {animation: fadeOut 1s ease-in-out;}
 .animation-bounce {animation: bounce 1s ease-in-out infinite;
 }
 
@@ -90,6 +91,15 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 

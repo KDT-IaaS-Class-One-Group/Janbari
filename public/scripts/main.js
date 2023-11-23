@@ -97,6 +97,9 @@ const observer = new IntersectionObserver((entries) => {
         jsonContainer.style.left = '50%';
         jsonContainer.style.transform = 'translate(-50%, -50%)';
 
+        // fadeIn 애니메이션 적용
+        jsonContainer.classList.add('animation-fadeIn');
+        
         // container에 새로운 div 추가
         container.appendChild(jsonContainer);
 
@@ -106,6 +109,9 @@ const observer = new IntersectionObserver((entries) => {
     } else {
       // id 엘리먼트가 보이지 않으면 생성한 div 삭제
       if (jsonContainer) {
+        // fadeOut 애니메이션 적용
+        jsonContainer.classList.add('animation-fadeOut');
+        
         container.removeChild(jsonContainer);
         jsonContainer = null; // 변수 초기화
 
