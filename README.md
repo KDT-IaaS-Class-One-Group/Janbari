@@ -2,6 +2,8 @@
 
 ### Prototype-view
 https://www.figma.com/file/zyjliDFhlrAdZRZqM7TiMV/Janbari?type=design&mode=design&t=vvk0JqbyHRgEETJl-0
+<img width="735" alt="image" src="https://github.com/KDT-IaaS-Class-One-Group/Janbari/assets/141696122/e3479604-3a1c-4bd7-b3ba-df4f8d473358">
+
 
 ### [Git/Commit 컨벤션]
 
