@@ -1,7 +1,7 @@
 # Janbari
 
 ### Prototype-view
-![텍스트]([http://cfile24.uf.tistory.com/image/2444873B57E257821FA2AE](https://www.figma.com/file/zyjliDFhlrAdZRZqM7TiMV/Janbari?type=design&mode=design&t=vvk0JqbyHRgEETJl-0))
+https://www.figma.com/file/zyjliDFhlrAdZRZqM7TiMV/Janbari?type=design&mode=design&t=vvk0JqbyHRgEETJl-0
 
 ### [Git/Commit 컨벤션]
 
