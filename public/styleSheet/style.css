@@ -16,18 +16,32 @@
 /* 너비, 높이, 여백 */
 .width-200px {width: 200px;}
 .height-200px {height: 200px;}
+.width-10vw {width: 10vw;}
+.width-20vw {width: 20vw;}
+.width-42-5vw {width: 42.5vw;}
 .width-45vw {width: 45vw;}
 .width-90vw {width: 90vw;}
-.width-10vw {width: 10vw;}
-.fontSiez-2rem {font-size: 2rem;}
 .height-10vw {height: 10vw;}
+.height-10vh {height: 10vh;}
 .height-20vh {height: 20vh;}
+.height-20vw {height: 20vw;}
+.height-32-5vh {height: 32.5vh;}
+.height-55vh {height: 55vh;}
+.height-65vh {height: 65vh;}
 .height-70vh {height: 70vh;}
 .border-right {border-right: solid black 2px;}
 .left-5vw {left: 5vw;}
+.left-88vw {left: 88vw;}
 .right-5vw {right: 5vw;}
 .top-5vw {top:5vw;}
+.top-33vh {top:33vh;}
 .bottom-5vw {bottom:5vw;}
+.margin-top-1vh {margin-top: 10vh;}
+
+/* 폰트 */
+.fontSiez-2rem {font-size: 2rem;}
+.fontSiez-3rem {font-size: 3rem;}
+
 
 /* 색상 */
 .bgc-white{background-color: white;}
@@ -43,8 +57,16 @@
 
 /* new-profile 스타일 지정*/
 .new-profile {
+  background-color: white;
+  width: 85vw;
+  height: 65vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
+
+.pSize {
+  text-align: left;
+  font-size: 1.3rem;
+}
+
