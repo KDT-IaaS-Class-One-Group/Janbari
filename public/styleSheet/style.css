@@ -18,6 +18,9 @@
 .height-200px {height: 200px;}
 .width-45vw {width: 45vw;}
 .width-90vw {width: 90vw;}
+.width-10vw {width: 10vw;}
+.fontSiez-2rem {font-size: 2rem;}
+.height-10vw {height: 10vw;}
 .height-20vh {height: 20vh;}
 .height-70vh {height: 70vh;}
 .border-right {border-right: solid black 2px;}
@@ -37,3 +40,11 @@
 .flex-column { flex-direction: column;}
 .justify-center { justify-content: center;}
 .align-center { align-items: center;}
+
+/* new-profile 스타일 지정*/
+.new-profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
