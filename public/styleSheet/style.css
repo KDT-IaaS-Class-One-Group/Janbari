@@ -30,6 +30,7 @@
 .height-65vh {height: 65vh;}
 .height-70vh {height: 70vh;}
 .border-right {border-right: solid black 2px;}
+.border-none {border: none;}
 .left-5vw {left: 5vw;}
 .left-88vw {left: 88vw;}
 .right-5vw {right: 5vw;}
@@ -54,6 +55,7 @@
 .flex-column { flex-direction: column;}
 .justify-center { justify-content: center;}
 .align-center { align-items: center;}
+
 
 /* new-profile 스타일 지정*/
 .new-profile {
