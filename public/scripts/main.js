@@ -2,6 +2,7 @@ const ho = document.getElementById('ho');
 const yu = document.getElementById('yu');
 const so = document.getElementById('so');
 const lee = document.getElementById('lee');
+const container = document.getElementById('container');
 
 fetch('/json')
   .then((response) => response.json())
@@ -21,9 +22,8 @@ fetch('/json')
     lee.addEventListener('click', () => handleProfileClick('잔잔바리/은정'));
 
     function handleProfileClick(profileId) {
-      // 새로운 div 생성
-      const newDiv = document.createElement('div');
-      newDiv.classList.add('new-profile'); // 예시로 'new-profile' 클래스를 추가
+      // 기존 내용 지우기
+      container.innerHTML = '';
     
       // JSON 파일에서 데이터 가져오기
       fetch('/json')
@@ -32,22 +32,30 @@ fetch('/json')
           const profileData = data[profileId];
     
           // 새로운 div에 데이터 추가
+          const newDiv = document.createElement('div');
+          newDiv.classList.add('new-profile');
           newDiv.innerHTML = `
             <h2>${profileData.name}</h2>
             <p>${profileData.personal_site}</p>
             <p>Contact: ${profileData.contact}</p>
             <p>Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
-            <img src="${profileData.img}" alt="Profile Image">
+            <img class= width-10vw height-10vw src="${profileData.img}" alt="Profile Image">
+            <button class = fontSiez-2rem onclick="handleBack()">🔙</button>
           `;
     
           // 새로운 div를 body에 추가
-          document.body.appendChild(newDiv);
+          container.appendChild(newDiv);
         })
         .catch(error => console.error('Error fetching JSON', error));
     }
   })
   .catch((error) => console.error('Error fetching JSON', error));
 
+  function handleBack() {
+  // 초기 화면으로 돌아가는 코드 추가
+  // 예: location.reload(); 또는 contentContainer.innerHTML = '초기화면의 HTML 코드';
+  location.reload(); // 페이지 새로고침을 통해 초기 상태로 돌아가는 예시
+}
 // fetch('/json')
 //       .then(response => response.json())
 //       .then(data => {
