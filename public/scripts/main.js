@@ -34,15 +34,19 @@ fetch('/json')
           // 새로운 div에 데이터 추가
           const newDiv = document.createElement('div');
           newDiv.classList.add('new-profile');
-          newDiv.style.width = '100vw';
+          newDiv.style.width = '70vw';
+          newDiv.style.height = '60vh';
+          newDiv.style.margin = 'auto';
+          newDiv.style.border = '1px solid black';
+          newDiv.style.backgroundColor = 'white';
           newDiv.innerHTML = `
-          <img class= width-30vw height-30vh src="${profileData.img}" alt="Profile Image">
-          <h2 class= "position-abs left-60vw top-1vw" >${profileData.name}</h2>
-          <p>한줄소개:${profileData.bio}</p>
-            <p>깃허브:${profileData.personal_site}</p>
-            <p>Email: ${profileData.contact}</p>
-            <p>Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
-            <button class = fontSiez-2rem onclick="handleBack()">🔙</button>
+          <img class= "width-30vw position-abs left-1vw" src="${profileData.img}" alt="Profile Image">
+          <h2 class= "position-abs left-40vw top-1vw" >${profileData.name}</h2>
+          <p class= "position-abs left-40vw top-5vw">깃허브:${profileData.personal_site}</p>
+          <p class= "position-abs left-40vw top-7vw fontSize-16px" >Email: ${profileData.contact}</p>
+          <p class= "position-abs left-40vw top-10vw " >Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
+          <p class= "position-abs left-40vw top-12vw fontSize-16px">한줄소개:${profileData.bio}</p>
+          <button class = "fontSiez-2rem position-abs top-1vw left-67vw" onclick="handleBack()">✖️</button>
           `;
 
           // 새로운 div를 body에 추가
