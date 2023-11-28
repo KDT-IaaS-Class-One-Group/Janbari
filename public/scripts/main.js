@@ -33,18 +33,18 @@ fetch('/json')
     
           // 새로운 div에 데이터 추가
           const newDiv = document.createElement('div');
-          newDiv.classList.add('new-profile', 'width-80vw', 'height-60vh');
+          newDiv.classList.add('new-profile', 'width-80vw', 'height-60vh', 'bgc-white');
           newDiv.innerHTML = `
-          <div>
+          <div class= "width-30vw height-60vh display-flex flex-column justify-center align-center">
+          <img class= "width-10vw height-10vw" src="${profileData.img}" alt="Profile Image">
             <h2>${profileData.name}</h2>
-            <img class= width-10vw height-10vw src="${profileData.img}" alt="Profile Image">
           </div>
-          <div>
-            <p>${profileData.personal_site}</p>
-            <p>Contact: ${profileData.contact}</p>
-            <p>Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
+          <div class= "width-50vw height-60vh display-flex flex-column justify-center font-32px font-sans">
+            <p><b>Github repo: </b>${profileData.personal_site}</p>
+            <p><b>Contact</b>: ${profileData.contact}</p>
+            <p><b>Current Project: </b><a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
             </div>
-            <button class = fontSiez-2rem onclick="handleBack()">🔙</button>
+            <button class= "font-2rem position-abs" onclick="handleBack()">🔙</button>
           `;
     
           // 새로운 div를 body에 추가

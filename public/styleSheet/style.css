@@ -16,11 +16,13 @@
 /* 너비, 높이, 여백 */
 .width-200px {width: 200px;}
 .height-200px {height: 200px;}
+.width-30vw {width: 30vw;}
+.width-40vw {width: 40vw;}
+.width-50vw {width: 50vw;}
 .width-45vw {width: 45vw;}
 .width-80vw {width: 80vw;}
 .width-90vw {width: 90vw;}
 .width-10vw {width: 10vw;}
-.fontSiez-2rem {font-size: 2rem;}
 .height-10vw {height: 10vw;}
 .height-20vh {height: 20vh;}
 .height-60vh {height: 60vh;}
@@ -43,9 +45,12 @@
 .justify-center { justify-content: center;}
 .align-center { align-items: center;}
 
+/* 글씨 크기 및 폰트 */
+.font-2rem {font-size: 2rem;}
+.font-32px {font-size: 2rem;}
+.font-sans {font-family: sans-serif;}
 /* new-profile 스타일 지정*/
 .new-profile {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: end;
 }
