@@ -66,14 +66,3 @@ fetch('/json')
   // 예: location.reload(); 또는 contentContainer.innerHTML = '초기화면의 HTML 코드';
   location.reload(); // 페이지 새로고침을 통해 초기 상태로 돌아가는 예시
 }
-// fetch('/json')
-//       .then(response => response.json())
-//       .then(data => {
-//         // Update background images based on JSON data
-//         const profiles = document.getElementsByClassName('profile');
-//         for (let i = 0; i < profiles.length; i++) {
-//           const profileName = profiles[i].getAttribute('data-profile-name');
-//           profiles[i].style.backgroundImage = `url(${data[profileName].img})`;
-//         }
-//       })
-//       .catch(error => console.error('Error fetching JSON:', error));
