@@ -35,10 +35,9 @@ fetch('/json')
           const newDiv = document.createElement('div');
           newDiv.classList.add('new-profile');
           newDiv.style.width = '100vw';
-          newDiv.style.height = '100vh';
           newDiv.innerHTML = `
-          <h2 class= position-abs left-5vw >${profileData.name}</h2>
-          <img class= width-35vw height-35vh src="${profileData.img}" alt="Profile Image">
+          <img class= width-30vw height-30vh src="${profileData.img}" alt="Profile Image">
+          <h2 class= "position-abs left-60vw top-1vw" >${profileData.name}</h2>
           <p>한줄소개:${profileData.bio}</p>
             <p>깃허브:${profileData.personal_site}</p>
             <p>Email: ${profileData.contact}</p>
