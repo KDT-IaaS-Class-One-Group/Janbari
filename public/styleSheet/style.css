@@ -14,37 +14,96 @@
 }
 
 /* 너비, 높이, 여백 */
-.width-200px {width: 200px;}
-.height-200px {height: 200px;}
-.width-45vw {width: 45vw;}
-.width-90vw {width: 90vw;}
-.width-10vw {width: 10vw;}
-.fontSiez-2rem {font-size: 2rem;}
-.height-10vw {height: 10vw;}
-.height-20vh {height: 20vh;}
-.height-70vh {height: 70vh;}
-.border-right {border-right: solid black 2px;}
-.left-5vw {left: 5vw;}
-.right-5vw {right: 5vw;}
-.top-5vw {top:5vw;}
-.bottom-5vw {bottom:5vw;}
+.width-200px {
+  width: 200px;
+}
+.height-200px {
+  height: 200px;
+}
+.width-20vw {
+  width: 20vw;
+}
+.width-45vw {
+  width: 45vw;
+}
+.width-35vw {
+  width: 35vw;
+}
+.width-90vw {
+  width: 90vw;
+}
+.width-10vw {
+  width: 10vw;
+}
+.fontSiez-2rem {
+  font-size: 2rem;
+}
+.height-10vw {
+  height: 10vw;
+}
+.height-20vh {
+  height: 20vh;
+}
+.height-35vh {
+  height: 35vh;
+}
+.height-45vh {
+  height: 45vh;
+}
+.height-70vh {
+  height: 70vh;
+}
+.border-right {
+  border-right: solid black 2px;
+}
+.left-5vw {
+  left: 5vw;
+}
+
+.right-5vw {
+  right: 5vw;
+}
+.top-5vw {
+  top: 5vw;
+}
+.bottom-5vw {
+  bottom: 5vw;
+}
 
 /* 색상 */
-.bgc-white{background-color: white;}
-.bgc-D9D9D9{background-color: #D9D9D9;}
+.bgc-white {
+  background-color: white;
+}
+.bgc-D9D9D9 {
+  background-color: #d9d9d9;
+}
+.color-orange {
+  color: orange;
+}
 
 /* 위치 */
-.display-flex {display: flex;}
-.position-rel {position: relative;}
-.position-abs {position: absolute;}
-.flex-column { flex-direction: column;}
-.justify-center { justify-content: center;}
-.align-center { align-items: center;}
+.display-flex {
+  display: flex;
+}
+.position-rel {
+  position: relative;
+}
+.position-abs {
+  position: absolute;
+}
+.flex-column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
 
 /* new-profile 스타일 지정*/
 .new-profile {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  position: relative;
 }
