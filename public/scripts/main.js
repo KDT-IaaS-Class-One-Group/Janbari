@@ -35,12 +35,22 @@ fetch('/json')
           const newDiv = document.createElement('div');
           newDiv.classList.add('new-profile');
           newDiv.innerHTML = `
-            <h2>${profileData.name}</h2>
-            <p>${profileData.personal_site}</p>
-            <p>Contact: ${profileData.contact}</p>
-            <p>Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
-            <img class= width-10vw height-10vw src="${profileData.img}" alt="Profile Image">
-            <button class = fontSiez-2rem onclick="handleBack()">🔙</button>
+            <div class = "position-abs left-88vw top-33vh">
+              <button class = "fontSiez-2rem" onclick="handleBack()">🔙</button>
+            </div>
+            <div class = "display-flex flex-column width-42-5vw height-65vh">
+              <div class = "display-flex justify-center align-center width-42-5vw height-10vh">
+                <h2 class = "fontSiez-3rem margin-top-1vh">${profileData.name}</h2>
+              </div>  
+              <div class = "display-flex justify-center align-center width-42-5vw height-55vh">  
+                <img class= "width-20vw height-20vw" src="${profileData.img}" alt="Profile Image">
+              </div>
+            </div>
+            <div class = "display-flex flex-column justify-center width-42-5vw height-65vh">
+              <p class = "pSize">${profileData.personal_site}</p>
+              <p class = "pSize">Contact: ${profileData.contact}</p>
+              <p class = "pSize">Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
+            </div>  
           `;
     
           // 새로운 div를 body에 추가
