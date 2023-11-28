@@ -33,13 +33,17 @@ fetch('/json')
     
           // 새로운 div에 데이터 추가
           const newDiv = document.createElement('div');
-          newDiv.classList.add('new-profile');
+          newDiv.classList.add('new-profile', 'width-80vw', 'height-60vh');
           newDiv.innerHTML = `
+          <div>
             <h2>${profileData.name}</h2>
+            <img class= width-10vw height-10vw src="${profileData.img}" alt="Profile Image">
+          </div>
+          <div>
             <p>${profileData.personal_site}</p>
             <p>Contact: ${profileData.contact}</p>
             <p>Current Project: <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
-            <img class= width-10vw height-10vw src="${profileData.img}" alt="Profile Image">
+            </div>
             <button class = fontSiez-2rem onclick="handleBack()">🔙</button>
           `;
     

@@ -17,11 +17,13 @@
 .width-200px {width: 200px;}
 .height-200px {height: 200px;}
 .width-45vw {width: 45vw;}
+.width-80vw {width: 80vw;}
 .width-90vw {width: 90vw;}
 .width-10vw {width: 10vw;}
 .fontSiez-2rem {font-size: 2rem;}
 .height-10vw {height: 10vw;}
 .height-20vh {height: 20vh;}
+.height-60vh {height: 60vh;}
 .height-70vh {height: 70vh;}
 .border-right {border-right: solid black 2px;}
 .left-5vw {left: 5vw;}
@@ -46,5 +48,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 }
