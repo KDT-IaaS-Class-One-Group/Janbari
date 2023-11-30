@@ -21,6 +21,11 @@ fetch('/json')
     so.style.border = 'solid orange 2px'
     lee.style.border = 'solid orange 2px'
 
+    ho.style.cursor = 'pointer'
+    yu.style.cursor = 'pointer'
+    so.style.cursor = 'pointer'
+    lee.style.cursor = 'pointer'
+
     ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
     yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
     so.addEventListener('click', () => handleProfileClick('잔잔바리/사무엘'));
@@ -41,7 +46,7 @@ fetch('/json')
           newDiv.classList.add('new-profile');
           newDiv.innerHTML = `
             <div class = "position-abs left-88vw top-33vh">
-              <button class = "fontSiez-2rem bgc-black border-none" onclick="handleBack()">❌</button>
+              <button class = "fontSiez-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
             </div>
             <div class = "display-flex flex-column width-42-5vw height-65vh">
               <div class = "display-flex justify-center align-center width-42-5vw height-10vh">

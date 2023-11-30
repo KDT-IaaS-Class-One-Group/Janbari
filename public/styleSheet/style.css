@@ -71,6 +71,10 @@
   color: white;
 }
 
+/* 커서 */
+.cursor-pointer {
+  cursor: pointer;
+}
 
 #header{
   animation: fadeIn 1s ease-in-out;
