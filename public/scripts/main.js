@@ -51,7 +51,7 @@ fetch('/json')
                 <img class= "width-20vw height-20vw border-orange" src="${profileData.img}" alt="Profile Image">
               </div>
             </div>
-            <div class = "display-flex flex-column justify-center width-42-5vw height-65vh">
+            <div class = "display-flex flex-column justify-center width-42-5vw height-65vh lineHeight">
               <p class = "pSize"><b>GitHub: </b>${profileData.personal_site}</p>
               <p class = "pSize"><b>E-mail: </b>${profileData.contact}</p>
               <p class = "pSize"><b>Projects: </b> <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>

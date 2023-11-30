@@ -73,8 +73,13 @@
 
 a:visited { color:white; }
 
+/* 행 간격 설정 */
+.lineHeight {
+  line-height: 5vh;
+}
 
 .pSize {
   text-align: left;
   font-size: 1.3rem;
 }
+
