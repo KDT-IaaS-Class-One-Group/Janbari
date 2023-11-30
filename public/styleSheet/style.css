@@ -68,9 +68,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid orange 2px;
   color: white;
 }
+
+a:visited { color:white; }
 
 
 .pSize {
