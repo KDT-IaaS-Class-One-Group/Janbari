@@ -12,20 +12,13 @@ fetch('/json')
     so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
     lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
 
-    ho.style.backgroundSize = 'cover';
-    yu.style.backgroundSize = 'cover';
-    so.style.backgroundSize = 'cover';
-    lee.style.backgroundSize = 'cover';
+    const name = [ho, yu, so, lee];
 
-    ho.style.borderRadius="20%"
-    yu.style.borderRadius="20%"
-    so.style.borderRadius="20%"
-    lee.style.borderRadius="20%"
-
-    ho.style.cursor = 'pointer'
-    yu.style.cursor = 'pointer'
-    so.style.cursor = 'pointer'
-    lee.style.cursor = 'pointer'
+    for (let i = 0; i < name.length; i++) {
+        name[i].style.backgroundSize = 'cover';
+        name[i].style.borderRadius = '20%';
+        name[i].style.cursor = 'pointer';
+    }
 
 
     ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
