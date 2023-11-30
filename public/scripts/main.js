@@ -16,6 +16,11 @@ fetch('/json')
     so.style.backgroundSize = 'cover';
     lee.style.backgroundSize = 'cover';
 
+    ho.style.border = 'solid orange 2px'
+    yu.style.border = 'solid orange 2px'
+    so.style.border = 'solid orange 2px'
+    lee.style.border = 'solid orange 2px'
+
     ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
     yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
     so.addEventListener('click', () => handleProfileClick('잔잔바리/사무엘'));
@@ -36,14 +41,14 @@ fetch('/json')
           newDiv.classList.add('new-profile');
           newDiv.innerHTML = `
             <div class = "position-abs left-88vw top-33vh">
-              <button class = "fontSiez-2rem bgc-white border-none" onclick="handleBack()">❌</button>
+              <button class = "fontSiez-2rem bgc-black border-none" onclick="handleBack()">❌</button>
             </div>
             <div class = "display-flex flex-column width-42-5vw height-65vh">
               <div class = "display-flex justify-center align-center width-42-5vw height-10vh">
                 <h2 class = "fontSiez-3rem margin-top-1vh">${profileData.name}</h2>
               </div>  
               <div class = "display-flex justify-center align-center width-42-5vw height-55vh">  
-                <img class= "width-20vw height-20vw" src="${profileData.img}" alt="Profile Image">
+                <img class= "width-20vw height-20vw border-orange" src="${profileData.img}" alt="Profile Image">
               </div>
             </div>
             <div class = "display-flex flex-column justify-center width-42-5vw height-65vh">
