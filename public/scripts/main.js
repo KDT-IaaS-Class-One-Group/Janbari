@@ -48,7 +48,7 @@ fetch('/json')
                 <h2 class = "fontSiez-3rem margin-top-1vh">${profileData.name}</h2>
               </div>  
               <div class = "display-flex justify-center align-center width-42-5vw height-55vh">  
-                <img class= "width-20vw height-20vw" src="${profileData.img}" alt="Profile Image">
+                <img class= "width-20vw height-20vw border-radius" src="${profileData.img}" alt="Profile Image">
               </div>
             </div>
             <div class = "display-flex flex-column justify-center width-42-5vw height-65vh">
