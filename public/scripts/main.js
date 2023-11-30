@@ -11,20 +11,22 @@ fetch('/json')
     yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
     so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
     lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
+
     ho.style.backgroundSize = 'cover';
     yu.style.backgroundSize = 'cover';
     so.style.backgroundSize = 'cover';
     lee.style.backgroundSize = 'cover';
 
-    ho.style.border = 'solid orange 2px'
-    yu.style.border = 'solid orange 2px'
-    so.style.border = 'solid orange 2px'
-    lee.style.border = 'solid orange 2px'
+    ho.style.borderRadius="20%"
+    yu.style.borderRadius="20%"
+    so.style.borderRadius="20%"
+    lee.style.borderRadius="20%"
 
     ho.style.cursor = 'pointer'
     yu.style.cursor = 'pointer'
     so.style.cursor = 'pointer'
     lee.style.cursor = 'pointer'
+
 
     ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
     yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
@@ -53,10 +55,10 @@ fetch('/json')
                 <h2 class = "fontSiez-3rem margin-top-1vh">${profileData.name}</h2>
               </div>  
               <div class = "display-flex justify-center align-center width-42-5vw height-55vh">  
-                <img class= "width-20vw height-20vw border-orange" src="${profileData.img}" alt="Profile Image">
+                <img class= "width-20vw height-20vw" src="${profileData.img}" alt="Profile Image">
               </div>
             </div>
-            <div class = "display-flex flex-column justify-center width-42-5vw height-65vh lineHeight">
+            <div class = "display-flex flex-column justify-center width-42-5vw height-65vh">
               <p class = "pSize"><b>GitHub: </b>${profileData.personal_site}</p>
               <p class = "pSize"><b>E-mail: </b>${profileData.contact}</p>
               <p class = "pSize"><b>Projects: </b> <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
