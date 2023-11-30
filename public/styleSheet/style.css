@@ -41,6 +41,8 @@
 .border-none {border: none;}
 .border-right {border-right: solid black 2px;}
 .border-orange {border: orange 2px solid;}
+.border-radius {border-radius: 20%;}
+
 
 /* 폰트 */
 .fontSiez-2rem {font-size: 2rem;}
@@ -71,6 +73,10 @@
   color: white;
 }
 
+/* 커서 */
+.cursor-pointer {
+  cursor: pointer;
+}
 
 #header{
   animation: fadeIn 1s ease-in-out;
