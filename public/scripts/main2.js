@@ -15,15 +15,14 @@ fetch('/json')
     yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
     so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
     lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
-    ho.style.backgroundSize = 'cover';
-    yu.style.backgroundSize = 'cover';
-    so.style.backgroundSize = 'cover';
-    lee.style.backgroundSize = 'cover';
 
-    ho.style.border = 'solid orange 2px'
-    yu.style.border = 'solid orange 2px'
-    so.style.border = 'solid orange 2px'
-    lee.style.border = 'solid orange 2px'
+    const name = [ho, yu, so, lee];
+
+    for (let i = 0; i < name.length; i++) {
+        name[i].style.backgroundSize = 'cover';
+        name[i].style.borderRadius = '20%';
+        name[i].style.cursor = 'pointer';
+    }
 
     ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
     yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
@@ -44,7 +43,7 @@ function handleProfileClick(profileId) {
     newDiv.classList.add('new-profile');
     newDiv.innerHTML = `
       <div class="position-abs left-88vw top-33vh">
-        <button class="fontSiez-2rem bgc-black border-none" onclick="handleBack()">❌</button>
+        <button class="fontSiez-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
       </div>
       <div class="display-flex flex-column width-42-5vw height-65vh">
         <div class="display-flex justify-center align-center width-42-5vw height-10vh">
