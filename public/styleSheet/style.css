@@ -71,6 +71,8 @@
   color: white;
 }
 
+/* 링크 클릭전 하얀색 링크 클릭 후 하얀색 */
+a { color: white }
 a:visited { color:white; }
 
 /* 행 간격 설정 */
