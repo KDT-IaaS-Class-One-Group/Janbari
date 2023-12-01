@@ -46,3 +46,6 @@ SELECT * FROM info;
 CREATE TABLE info_new AS
 SELECT name, personal_site, bio, contact, current_project, img
 FROM info;
+
+-- 기존 테이블 삭제
+DROP TABLE info;
