@@ -70,3 +70,5 @@ UPDATE info
 SET bio = '항상 배려하고 긍정적으로 최선을 다하자.'
 WHERE name = '이은정';
 
+-- 갱신된 데이터 확인
+SELECT * FROM info;
