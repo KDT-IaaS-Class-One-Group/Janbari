@@ -5,6 +5,17 @@ const router = express.Router();
 const path = require('path');
 const fs = require('fs');
 
+// MySQL
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'Andpf445169!',
+  database: 'janbari',
+})
+
+
+
 // 정적 파일 서빙 설정
 router.use('/public', express.static(path.join(__dirname, '..', 'public')));
 
