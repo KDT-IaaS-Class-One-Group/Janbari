@@ -23,3 +23,6 @@ INSERT INTO info (name, personal_site, contact, current_project, img) VALUES
   ('유승민', 'https://github.com/Yusmin97', 'tmdamsi97@gmail.com', 'https://github.com/Yusmin97/petCheck', 'https://ca.slack-edge.com/T02JAN3TFEU-U05QNF5CVPS-7428567c34ec-512'),
   ('소사무엘', 'https://github.com/samuel21695', 'samuelso21695@gmail.com', 'https://github.com/samuel21695/Rest-SPA-Application', 'https://ca.slack-edge.com/T02JAN3TFEU-U05PS53QQAJ-c7257b63ee29-512'),
   ('이은정', 'https://github.com/LeeEunJeong0731', 'eunjeong990731@gmail.com', 'https://github.com/LeeEunJeong0731/gabojago', 'https://ca.slack-edge.com/T02JAN3TFEU-U05Q17NEBQU-7f78254ec90a-512');
+
+-- info TABLE에 추가된 데이터를 확인
+SELECT * FROM info;
