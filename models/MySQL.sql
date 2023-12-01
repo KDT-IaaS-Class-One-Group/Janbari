@@ -49,3 +49,6 @@ FROM info;
 
 -- 기존 테이블 삭제
 DROP TABLE info;
+
+-- 새롭게 생성한 테이블 이름 변경
+ALTER TABLE info_new RENAME to info;
