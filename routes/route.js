@@ -48,7 +48,7 @@ router.get('/json', (req, res) => {
 
 router.get('/api/data', (req, res) => {
   // MySQL에서 데이터 가져오기
-  connection.query('SELECT * FROM team_members', (error, resilts, fields) => {
+  connection.query('SELECT * FROM team_members', (error, results, fields) => {
     if (error) throw error;
 
     // JSON 형태로 응답

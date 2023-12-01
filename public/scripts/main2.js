@@ -6,17 +6,27 @@ const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
-fetch('/json')
+fetch('/api/data')
   .then((response) => response.json())
   .then((data) => {
+    const name = [ho, yu, so, lee];
     jsonData = data; // JSON 데이터 저장
 
-    ho.style.backgroundImage = `url(${data['잔잔바리/호녕'].img})`;
-    yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
-    so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
-    lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
+    //동적으로 키를 사용하여 데이터 가져오기
+    Object.keys(data).forEach((profilekey, index) => {
+      const profileData = data[profilekey];
+      const profileElement = name[index];
 
-    const name = [ho, yu, so, lee];
+      if (profileData && profileElement) {
+        profileElement.style.backgroundImage = `url(${profileData.img})`;
+      }
+    })
+
+    // ho.style.backgroundImage = `url(${data['잔잔바리/호녕'].img})`;
+    // yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
+    // so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
+    // lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
+
 
     for (let i = 0; i < name.length; i++) {
         name[i].style.backgroundSize = 'cover';
