@@ -52,3 +52,21 @@ DROP TABLE info;
 
 -- 새롭게 생성한 테이블 이름 변경
 ALTER TABLE info_new RENAME to info;
+
+-- 팀원들의 bio 데이터 갱신
+UPDATE info
+SET bio = '포기하지 않으면 반드시 해낼 수 있다.'
+WHERE name = '변호녕';
+
+UPDATE info
+SET bio = '차근차근 무너지지 않게 쌓아가는 생활을 하자.'
+WHERE name = '유승민';
+
+UPDATE info
+SET bio = '순간 순간 최선을 다하자.'
+WHERE name = '소사무엘';
+
+UPDATE info
+SET bio = '항상 배려하고 긍정적으로 최선을 다하자.'
+WHERE name = '이은정';
+
