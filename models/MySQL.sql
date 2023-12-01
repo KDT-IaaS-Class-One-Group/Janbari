@@ -35,3 +35,6 @@ ADD COLUMN bio TEXT;
 UPDATE info
 SET bio = '변호녕의 좌우명'
 WHERE name = '변호녕';
+
+-- info 테이블에 추가된 데이터를 확인
+SELECT * FROM info;
