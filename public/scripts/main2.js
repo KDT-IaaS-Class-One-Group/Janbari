@@ -13,32 +13,32 @@ fetch('/json')
   .then((data) => {
     jsonData = data; // JSON 데이터 저장
 
-    ho.style.backgroundImage = `url(${data['잔잔바리/호녕'].img})`;
-    yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
-    so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
-    lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
+    ho.style.backgroundImage = `url(${data[0].img})`;
+    yu.style.backgroundImage = `url(${data[1].img})`;
+    so.style.backgroundImage = `url(${data[2].img})`;
+    lee.style.backgroundImage = `url(${data[3].img})`;
 
     const name = [ho, yu, so, lee];
 
     for (let i = 0; i < name.length; i++) {
-        name[i].style.backgroundSize = 'cover';
-        name[i].style.borderRadius = '20%';
-        name[i].style.cursor = 'pointer';
+      name[i].style.backgroundSize = 'cover';
+      name[i].style.borderRadius = '20%';
+      name[i].style.cursor = 'pointer';
     }
 
-    ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
-    yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
-    so.addEventListener('click', () => handleProfileClick('잔잔바리/사무엘'));
-    lee.addEventListener('click', () => handleProfileClick('잔잔바리/은정'));
+    ho.addEventListener('click', () => handleProfileClick(0));
+    yu.addEventListener('click', () => handleProfileClick(1));
+    so.addEventListener('click', () => handleProfileClick(2));
+    lee.addEventListener('click', () => handleProfileClick(3));
   })
   .catch((error) => console.error('Error fetching JSON', error));
 
-function handleProfileClick(profileId) {
+function handleProfileClick(index) {
   // 기존 내용 지우기
   container.innerHTML = '';
 
   if (jsonData) {
-    const profileData = jsonData[profileId];
+    const profileData = jsonData[index];
 
     // 새로운 div에 데이터 추가
     const newDiv = document.createElement('div');
@@ -71,6 +71,5 @@ function handleProfileClick(profileId) {
 
 function handleBack() {
   // 초기 화면으로 돌아가는 코드 추가
-  // 예: location.reload(); 또는 contentContainer.innerHTML = '초기화면의 HTML 코드';
   location.reload(); // 페이지 새로고침을 통해 초기 상태로 돌아가는 예시
 }
