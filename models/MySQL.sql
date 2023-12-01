@@ -30,3 +30,8 @@ SELECT * FROM info;
 -- info 테이블에 bio 컬럼 추가
 ALTER TABLE info
 ADD COLUMN bio TEXT;
+
+-- 데이터 갱신
+UPDATE info
+SET bio = '변호녕의 좌우명'
+WHERE name = '변호녕';
