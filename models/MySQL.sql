@@ -26,3 +26,7 @@ INSERT INTO info (name, personal_site, contact, current_project, img) VALUES
 
 -- info TABLE에 추가된 데이터를 확인
 SELECT * FROM info;
+
+-- info 테이블에 bio 컬럼 추가
+ALTER TABLE info
+ADD COLUMN bio TEXT;
