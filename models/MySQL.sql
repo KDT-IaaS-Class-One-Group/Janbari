@@ -38,3 +38,11 @@ WHERE name = '변호녕';
 
 -- info 테이블에 추가된 데이터를 확인
 SELECT * FROM info;
+
+--! 컬럼 순서를 변경하는 별도의 기능은 MySQL에서 제공되지 않았다.
+--* 따라서, 새로운 테이블을 생성하고 기존 테이블을 삭제한 뒤에 새로운 테이블 이름을 기존과 같이 변경해주려고 한다.
+
+-- 새로운 테이블 생성
+CREATE TABLE info_new AS
+SELECT name, personal_site, bio, contact, current_project, img
+FROM info;
