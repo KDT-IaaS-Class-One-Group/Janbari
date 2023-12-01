@@ -1,3 +1,5 @@
+// public/scripts/main2.js
+
 const ho = document.getElementById('ho');
 const yu = document.getElementById('yu');
 const so = document.getElementById('so');
