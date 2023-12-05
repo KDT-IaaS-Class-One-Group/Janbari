@@ -19,8 +19,73 @@ const lee = getMemberElementById('lee');
 const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
 
-// JSON 데이터 저장을 위한 변수 선언
-let jsonData;
+// JSON 데이터 저장을 위해 전역 스코프에 변수 선언
+let jsonData = null;
+
+/**
+ * Fetch를 사용하여 JSON 데이터를 가져오고 팀원 정보를 업데이트하는 함수
+ * @param {string} url - JSON 데이터를 가져올 URL
+ * @param {HTMLElement} ho - '잔잔바리/호녕'
+ * @param {HTMLElement} yu - '잔잔바리/승민'
+ * @param {HTMLElement} so - '잔잔바리/사무엘'
+ * @param {HTMLElement} lee - '잔잔바리/은정'
+ */
+function fetchDataAndUpdate(url, ho, yu, so, lee) {
+  fetch(url)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`HTTP Error: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then((data) => {
+      jsonData = data;
+      // 팀원 정보 업데이트
+      updateTeamMembersInfo([ho, yu, so, lee], data);
+    })
+    .catch((error) => {
+      console.error('JSON fetch Error: ', error.message);
+    });
+}
+
+/**
+ * 팀원 정보를 업데이트하는 함수
+ * @param {HTMLElement[]} elements - 팀원 요소 배열
+ * @param {Object} data - 업데이트에 사용할 JSON 데이터
+ */
+function updateTeamMembersInfo(elements, data) {
+  const teamMembers = ['잔잔바리/호녕', '잔잔바리/승민', '잔잔바리/사무엘', '잔잔바리/은정'];
+
+  // 배열에 접근해 forEach() 메서드로 반복문 적용
+  teamMembers.forEach((member, index) => {
+    const element = elements[index];
+    element.style.backgroundImage = `url(${data[member].img})`;
+    element.style.backgroundSize = 'cover';
+    element.style.borderRadius = '20%';
+    element.style.cursor = 'pointer';
+    element.addEventListener('click', () => {
+      handleProfileClick(member);
+    });
+  });
+}
+
+// HTML에서 팀원들의 이미지를 표시할 요소들 가져오기
+const hoElement = document.getElementById('ho');
+const yuElement = document.getElementById('yu');
+const soElement = document.getElementById('so');
+const leeElement = document.getElementById('lee');
+// JSON 데이터를 가져올 URL
+const jsonUrl = '/json';
+
+// fetchDataAndUpdate() 함수를 호출해 JSON 데이터를 가져오고 팀원 정보를 업데이트
+fetchDataAndUpdate(jsonUrl, hoElement, yuElement, soElement, leeElement);
+
+
+
+
+
+
+
 
 fetch('/json')
   .then((response) => response.json())
@@ -46,6 +111,8 @@ fetch('/json')
     lee.addEventListener('click', () => handleProfileClick('잔잔바리/은정'));
   })
   .catch((error) => console.error('Error fetching JSON', error));
+
+
 
 function handleProfileClick(profileId) {
   // 기존 내용 지우기
