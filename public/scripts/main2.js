@@ -6,22 +6,29 @@ const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
+// 프로필 생성 함수
 function createProfile(element, profileKey) {
+  // 프로필 엘리먼트에 배경 이미지 설정
   element.style.backgroundImage =`url(${jsonData[profileKey].img})`;
+
+  // 스타일 설정
   element.style.backgroundSize = 'cover';
   element.style.borderRadius = '20%';
   element.style.cursor = 'pointer';
+
+  // 클릭 이벤트 추가
   element.addEventListener('click', () => handleProfileClick(profileKey));
 }
-
 
 fetch('/json')
   .then((response) => response.json())
   .then((data) => {
     jsonData = data; // JSON 데이터 저장
 
+    // 가져올 키 배열로 정의
     const profiles = ['잔잔바리/호녕', '잔잔바리/승민', '잔잔바리/사무엘', '잔잔바리/은정']
 
+    // forEach 반복문을 사용하여 각 프로필에 대해 createProfile  함수 실행
     profiles.forEach((profileKey, index) => {
       createProfile([ho, yu, so, lee][index], profileKey)
     })
