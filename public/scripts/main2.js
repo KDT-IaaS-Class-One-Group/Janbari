@@ -14,6 +14,20 @@ function createProfile(element, profileKey) {
   element.addEventListener('click', () => handleProfileClick(profileKey));
 }
 
+
+fetch('/json')
+  .then((response) => response.json())
+  .then((data) => {
+    jsonData = data; // JSON 데이터 저장
+
+    const profiles = ['잔잔바리/호녕', '잔잔바리/승민', '잔잔바리/사무엘', '잔잔바리/은정']
+
+    profiles.forEach((profileKey, index) => {
+      createProfile([ho, yu, so, lee][index], profileKey)
+    })
+  })
+  .catch((error) => console.error('Error fetching JSON', error));
+
 function handleProfileClick(profileId) {
   // 기존 내용 지우기
   container.innerHTML = '';
