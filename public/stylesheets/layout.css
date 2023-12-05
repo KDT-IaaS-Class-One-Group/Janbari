@@ -1,0 +1,20 @@
+/* public/stylesheets/layout.css */
+
+/* display 세팅 */
+/** flex */
+.display-flex {display: flex;}
+.flex-column {flex-direction: column;}
+
+
+
+/* position 세팅 */
+.position-relative {position: relative;}
+.position-absolute {position: absolute;}
+
+
+/* 정렬 */
+/* 중앙 정렬 */
+.justify-center {justify-content: center;}
+.align-center {align-items: center;}
+
+

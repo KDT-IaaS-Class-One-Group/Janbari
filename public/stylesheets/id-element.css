@@ -1,0 +1,35 @@
+/* public/stylesheets/header.css */
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#header h1 {
+  font-size: 100px;
+  line-height: 0.75;
+  margin-top: 5px;
+  color: #000;
+  text-shadow: -1px -1px 0 #FFA500, 0px -1px 0 #FFA500, 1px -1px 0 #FFA500,
+    -1px 0px 0 #FFA500, 0px 0px 0 #FFA500, 1px 0px 0 #FFA500, -1px 1px 0 #FFA500,
+    0px 1px 0 #FFA500, 1px 1px 0 #FFA500, -1px -1px 6px #121212,
+    0px -1px 6px #121212, 1px -1px 6px #121212, -1px 0px 6px #121212,
+    0px 0px 6px #121212, 1px 0px 6px #121212, -1px 1px 6px #121212,
+    0px 1px 6px #121212, 1px 1px 6px #121212;
+  background-image: linear-gradient(45deg, #FF4500, #FFD700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: bounce 1s ease-in-out infinite;
+  animation-delay: -0.05s;
+  will-change: transform;
+}

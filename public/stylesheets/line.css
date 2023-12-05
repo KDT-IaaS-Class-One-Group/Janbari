@@ -1,0 +1,6 @@
+/* public/stylesheets/line.css */
+
+/* 행 간격 설정 */
+.lineHeight {
+  line-height: 5vh;
+}

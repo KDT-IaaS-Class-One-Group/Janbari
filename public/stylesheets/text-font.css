@@ -1,0 +1,11 @@
+/* public/stylesheets/font.css */
+
+/* 폰트 */
+.fontSiez-2rem {font-size: 2rem;}
+.fontSiez-3rem {font-size: 3rem;}
+
+/* 텍스트 */
+.pSize {
+  text-align: left;
+  font-size: 1.3rem;
+}

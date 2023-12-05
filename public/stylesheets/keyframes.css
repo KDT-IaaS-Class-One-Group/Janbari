@@ -1,0 +1,22 @@
+/* public.stylesheets/keyframes.css */
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0px) translateX(-10px) translateZ(0);
+  }
+  50% {
+    transform: translateY(-10px) translateX(10px) translateZ(0);
+  }
+  100% {
+    transform: translateY(0px) translateX(-10px) translateZ(0);
+  }
+}

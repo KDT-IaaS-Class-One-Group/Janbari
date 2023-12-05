@@ -1,0 +1,9 @@
+/* public/stylesheets/link.css */
+
+/* a 태그 */
+a { 
+  color: white;
+}
+a:visited {
+  color:white; 
+}
