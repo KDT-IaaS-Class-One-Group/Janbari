@@ -1,0 +1,23 @@
+<!-- test/views/test.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EJS 템플릿 엔진 탐구</title>
+</head>
+<body>
+  <div class="profile">
+    <% for (const key in profileData) { %>
+      <h2><%= key %></h2>
+      <ul>
+        <% const data = profileData[key]; %>
+        <% for (const prop in data) { %>
+          <li><strong><%= prop %>:</strong> <%= data[prop] %></li>
+        <% } %>
+      </ul>
+    <% } %>
+  </div>
+</body>
+</html>
