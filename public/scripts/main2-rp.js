@@ -37,7 +37,7 @@ fetch('/json')
 function createProfileHTML(profileData) {
   return `
       <div class="position-abs left-88vw top-33vh">
-        <button class="fontSiez-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
+        <input type="button" onclick="handleBack" class="fontSiez-2rem bgc-black border-none cursor-pointer" value="❌">
       </div>
       <div class="display-flex flex-column width-42-5vw height-65vh">
         <div class="display-flex justify-center align-center width-42-5vw height-10vh">
@@ -68,11 +68,15 @@ function handleProfileClick(profileId) {
 
     // 새로운 div를 container에 추가
     container.appendChild(newDiv);
-  }else {
+  } else {
     console.error('JSON data is not available.');
   }
 }
 
+// const closeBtn = document.getElementById('closeBtn');
+// closeBtn.addEventListener('click', () => {
+//   location.reload();
+// });
 function handleBack() {
   // 초기 화면으로 돌아가는 코드 추가
   // 예: location.reload(); 또는 contentContainer.innerHTML = '초기화면의 HTML 코드';
