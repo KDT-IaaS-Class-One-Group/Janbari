@@ -6,30 +6,13 @@ const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
-fetch('/json')
-  .then((response) => response.json())
-  .then((data) => {
-    jsonData = data; // JSON 데이터 저장
-
-    ho.style.backgroundImage = `url(${data['잔잔바리/호녕'].img})`;
-    yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
-    so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
-    lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
-
-    const name = [ho, yu, so, lee];
-
-    for (let i = 0; i < name.length; i++) {
-        name[i].style.backgroundSize = 'cover';
-        name[i].style.borderRadius = '20%';
-        name[i].style.cursor = 'pointer';
-    }
-
-    ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
-    yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
-    so.addEventListener('click', () => handleProfileClick('잔잔바리/사무엘'));
-    lee.addEventListener('click', () => handleProfileClick('잔잔바리/은정'));
-  })
-  .catch((error) => console.error('Error fetching JSON', error));
+function createProfile(element, profileKey) {
+  element.style.backgroundImage =`url(${jsonData[profileKey].img})`;
+  element.style.backgroundSize = 'cover';
+  element.style.borderRadius = '20%';
+  element.style.cursor = 'pointer';
+  element.addEventListener('click', () => handleProfileClick(profileKey));
+}
 
 function handleProfileClick(profileId) {
   // 기존 내용 지우기
