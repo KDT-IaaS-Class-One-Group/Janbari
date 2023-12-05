@@ -1,3 +1,4 @@
+//* 프로필 정보를 담은 배열,객체 html의 id와 json데이터의 키로 구성되어있다.
 const profileElements = [
   { id: 'ho', jsonKey: '잔잔바리/호녕' },
   { id: 'yu', jsonKey: '잔잔바리/승민' },
@@ -9,6 +10,7 @@ const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
+//* async는 json 데이터를 가져오는 비동기 함수 fatch를 사용해서 서버에서 json 데이터를 받아온다.
 async function fetchData() {
   try {
     const response = await fetch('/json');
@@ -17,23 +19,29 @@ async function fetchData() {
     console.error('Error fetching JSON', error);
   }
 }
-
+//* 프로필을 가져오는 함수
 function renderProfiles() {
+  //* 배열을 순회하면서 스타일을 지정하고 클릭이벤트를 추가한다.
   profileElements.forEach(({ id, jsonKey }) => {
+    //* 현재 순회중인 프로필요소의 html요소를 id를 사용하여 가져온다.
     const element = document.getElementById(id);
+    //*프로필 스타일을 설정한다.
     setProfileStyle(element, jsonData[jsonKey].img);
+    //* 클릭이벤트를 생성한다.
     profileClick(element, jsonKey);
   });
 }
-
+//* 프로필 이미지의 스타일 지정
 function setProfileStyle(element, imgUrl) {
   element.style.backgroundImage = `url(${imgUrl})`;
   element.style.backgroundSize = 'cover';
   element.style.borderRadius = '20%';
   element.style.cursor = 'pointer';
 }
-
+//* 클릭이벤트 설정
 function profileClick(element, profileKey) {
+  //* 클릭을 하면 handleProfileClick 함수를 호출하게 된다.
+  //* 컨테이너 innerHtml 빈칸
   element.addEventListener('click', () => handleProfileClick(profileKey));
 }
 
