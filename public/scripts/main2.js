@@ -1,10 +1,26 @@
-const ho = document.getElementById('ho');
-const yu = document.getElementById('yu');
-const so = document.getElementById('so');
-const lee = document.getElementById('lee');
+// public/scripts/main2.js
+
+/**
+ * 팀원들 이름 엘리먼트를 변수로 선언하는 함수
+ * @param {string} member - 팀원의 이름
+ * @returns {HTMLElement} - 팀원의 HTML 엘리먼트
+ */
+function getMemberElementById(member) {
+  return document.getElementById(member);
+}
+
+// DOM 접근을 위한 엘리먼트들을 변수 선언
+// 팀원 이름
+const ho = getMemberElementById('ho');
+const yu = getMemberElementById('yu');
+const so = getMemberElementById('so');
+const lee = getMemberElementById('lee');
+// HTML 요소
 const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
-let jsonData; // JSON 데이터를 저장할 변수
+
+// JSON 데이터 저장을 위한 변수 선언
+let jsonData;
 
 fetch('/json')
   .then((response) => response.json())
