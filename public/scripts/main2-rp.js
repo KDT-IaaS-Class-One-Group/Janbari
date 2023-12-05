@@ -48,7 +48,7 @@ function createProfileHTML(profileData) {
         </div>
       </div>
       <div class="display-flex flex-column justify-center width-42-5vw height-65vh lineHeight">
-        <p class="pSize"><b>GitHub: </b>${profileData.personal_site}</p>
+        <p class="pSize"><b>GitHub: </b><a href="${profileData.personal_site}" target="_blank">${profileData.personal_site}</a></p>
         <p class="pSize"><b>E-mail: </b>${profileData.contact}</p>
         <p class="pSize"><b>Projects: </b> <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
       </div> 
