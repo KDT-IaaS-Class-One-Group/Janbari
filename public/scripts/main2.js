@@ -9,19 +9,22 @@ const container = document.getElementById('container');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
-fetch('/json')
-  .then((response) => response.json())
-  .then((data) => {
-    jsonData = data; // JSON 데이터 저장
+async function fetchData() {
+  try {
+    const response = await fetch('/json');
+    jsonData = await response.json();
+  } catch (error) {
+    console.error('Error fetching JSON', error);
+  }
+}
 
-    // 프로필 이미지 및 스타일 설정
-    profileElements.forEach((profile) => {
-      const element = document.getElementById(profile.id);
-      setProfileStyle(element, data[profile.jsonKey].img);
-      profileClick(element, profile.jsonKey);
-    });
-  })
-  .catch((error) => console.error('Error fetching JSON', error));
+function renderProfiles() {
+  profileElements.forEach(({ id, jsonKey }) => {
+    const element = document.getElementById(id);
+    setProfileStyle(element, jsonData[jsonKey].img);
+    profileClick(element, jsonKey);
+  });
+}
 
 function setProfileStyle(element, imgUrl) {
   element.style.backgroundImage = `url(${imgUrl})`;
@@ -79,3 +82,6 @@ function handleBack() {
   // 예: location.reload(); 또는 contentContainer.innerHTML = '초기화면의 HTML 코드';
   location.reload(); // 페이지 새로고침을 통해 초기 상태로 돌아가는 예시
 }
+
+// fetchData 함수 호출 및 데이터 렌더링
+fetchData().then(renderProfiles);
