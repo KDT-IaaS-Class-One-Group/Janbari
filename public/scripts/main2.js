@@ -80,40 +80,6 @@ const jsonUrl = '/json';
 // fetchDataAndUpdate() 함수를 호출해 JSON 데이터를 가져오고 팀원 정보를 업데이트
 fetchDataAndUpdate(jsonUrl, hoElement, yuElement, soElement, leeElement);
 
-
-
-
-
-
-
-
-fetch('/json')
-  .then((response) => response.json())
-  .then((data) => {
-    jsonData = data; // JSON 데이터 저장
-
-    ho.style.backgroundImage = `url(${data['잔잔바리/호녕'].img})`;
-    yu.style.backgroundImage = `url(${data['잔잔바리/승민'].img})`;
-    so.style.backgroundImage = `url(${data['잔잔바리/사무엘'].img})`;
-    lee.style.backgroundImage = `url(${data['잔잔바리/은정'].img})`;
-
-    const name = [ho, yu, so, lee];
-
-    for (let i = 0; i < name.length; i++) {
-        name[i].style.backgroundSize = 'cover';
-        name[i].style.borderRadius = '20%';
-        name[i].style.cursor = 'pointer';
-    }
-
-    ho.addEventListener('click', () => handleProfileClick('잔잔바리/호녕'));
-    yu.addEventListener('click', () => handleProfileClick('잔잔바리/승민'));
-    so.addEventListener('click', () => handleProfileClick('잔잔바리/사무엘'));
-    lee.addEventListener('click', () => handleProfileClick('잔잔바리/은정'));
-  })
-  .catch((error) => console.error('Error fetching JSON', error));
-
-
-
 function handleProfileClick(profileId) {
   // 기존 내용 지우기
   container.innerHTML = '';
