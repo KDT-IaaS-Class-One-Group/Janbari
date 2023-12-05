@@ -87,18 +87,16 @@ function handleProfileClick(profileId) {
   if (jsonData) {
     const profileData = jsonData[profileId];
 
-    // 새로운 div에 데이터 추가
-    const newDiv = document.createElement('div');
-    newDiv.classList.add('new-profile');
-    newDiv.innerHTML = `
+    // template 엔진을 사용하여 HTML 코드 생성
+    const html = `
       <div class="position-abs left-88vw top-33vh">
         <button class="fontSiez-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
       </div>
       <div class="display-flex flex-column width-42-5vw height-65vh">
         <div class="display-flex justify-center align-center width-42-5vw height-10vh">
           <h2 class="fontSiez-3rem margin-top-1vh">${profileData.name}</h2>
-        </div>  
-        <div class="display-flex justify-center align-center width-42-5vw height-55vh">  
+        </div>
+        <div class="display-flex justify-center align-center width-42-5vw height-55vh">
           <img class="width-20vw height-20vw border-orange" src="${profileData.img}" alt="Profile Image">
         </div>
       </div>
@@ -106,10 +104,13 @@ function handleProfileClick(profileId) {
         <p class="pSize"><b>GitHub: </b>${profileData.personal_site}</p>
         <p class="pSize"><b>E-mail: </b>${profileData.contact}</p>
         <p class="pSize"><b>Projects: </b> <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
-      </div>  
+      </div>
     `;
 
-    // 새로운 div를 container에 추가
+    // 새로운 div에 HTML 코드를 추가
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('new-profile');
+    newDiv.innerHTML = html;
     container.appendChild(newDiv);
   } else {
     console.error('JSON data is not available.');
