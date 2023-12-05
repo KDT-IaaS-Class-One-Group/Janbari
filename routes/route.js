@@ -30,7 +30,6 @@ router.get('/json', (req, res) => {
 
     // JSON 데이터를 파싱
     const jsonData = JSON.parse(data);
-    console.log(jsonData);
   })
 })
 
