@@ -12,6 +12,7 @@
 .height-20vh {height: 20vh;}
 .height-20vw {height: 20vw;}
 .height-32-5vh {height: 32.5vh;}
+.height-35vh {height: 35vh;}
 .height-55vh {height: 55vh;}
 .height-65vh {height: 65vh;}
 .height-70vh {height: 70vh;}
@@ -67,6 +68,7 @@
 .justify-center {justify-content: center;}
 .align-center {align-items: center;}
 .justify-between{justify-content: space-between;}
+.justify-evenly{justify-content: space-evenly;}
 .justify-end {justify-content: end;}
 .zindex-2{z-index: 2;}
 .text-center {text-align: center;}
