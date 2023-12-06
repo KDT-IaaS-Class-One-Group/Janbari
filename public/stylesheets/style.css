@@ -1,7 +1,7 @@
 /* public/stylesheets/style.css */
 
 /* 스타일 통합관리 */
-@import url("./width-height.css");
+/* @import url("./width-height.css");
 @import url("./position.css");
 @import url("./text-font.css");
 @import url("./margin-padding.css");
@@ -13,7 +13,7 @@
 @import url("./link.css");
 @import url("./keyframes.css");
 @import url("./id-element.css");
-@import url("./class-element.css");
+@import url("./class-element.css"); */
 
 * {
   margin: 0;
