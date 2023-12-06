@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+#header{
+  width: 100vw;
+  height: 20vh;
+}
+
+#container{
+  width: 100vw;
+  height: 4020vh;
+}
+.label {
+  width: 20vw;
+  height: 50vh;
+}
+.membersInfo{
+  width: 100vw;
+  height: 4000vh;
+}
+.Yu{
+  width: 100vw;
+  height: 1000vh;
+  background-color: lightblue;
+}
+.So{
+  width: 100vw;
+  height: 1000vh;
+  background-color: lightgreen;
+}
+.Lee{
+  width: 100vw;
+  height: 1000vh;
+  background-color: lightcoral;
+}
+.Byeon{
+  width: 100vw;
+  height: 1000vh;
+  background-color: lightsalmon;
+}
