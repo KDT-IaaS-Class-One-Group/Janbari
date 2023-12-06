@@ -48,9 +48,11 @@
 .position-rel {position: relative;}
 .position-abs {position: absolute;}
 .position-fix {position: fixed;}
+.position-sticky {position: sticky;}
 .flex-column {flex-direction: column;}
 .justify-center {justify-content: center;}
 .align-center {align-items: center;}
+.zindex-2{z-index: 2;}
 
 /* 커서 */
 .cursor-pointer {
