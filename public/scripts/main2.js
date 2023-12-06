@@ -1,5 +1,8 @@
 // public/scripts/main2.js
 
+// npm install ejs로 설치하고 모듈 사용
+const ejs = require('ejs'); 
+
 /**
  * 팀원들 이름 엘리먼트를 변수로 선언하는 함수
  * @param {string} member - 팀원의 이름
@@ -87,31 +90,18 @@ function handleProfileClick(profileId) {
   if (jsonData) {
     const profileData = jsonData[profileId];
 
-    // template 엔진을 사용하여 HTML 코드 생성
-    const html = `
-      <div class="position-abs left-88vw top-33vh">
-        <button class="fontSize-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
-      </div>
-      <div class="display-flex flex-column width-42-5vw height-65vh">
-        <div class="display-flex justify-center align-center width-42-5vw height-10vh">
-          <h2 class="fontSize-3rem margin-top-1vh">${profileData.name}</h2>
-        </div>
-        <div class="display-flex justify-center align-center width-42-5vw height-55vh">
-          <img class="width-20vw height-20vw border-orange" src="${profileData.img}" alt="Profile Image">
-        </div>
-      </div>
-      <div class="display-flex flex-column justify-center width-42-5vw height-65vh lineHeight">
-        <p class="pSize"><b>GitHub: </b>${profileData.personal_site}</p>
-        <p class="pSize"><b>E-mail: </b>${profileData.contact}</p>
-        <p class="pSize"><b>Projects: </b> <a href="${profileData.current_project}" target="_blank">${profileData.current_project}</a></p>
-      </div>
-    `;
-
-    // 새로운 div에 HTML 코드를 추가
-    const newDiv = document.createElement('div');
-    newDiv.classList.add('new-profile');
-    newDiv.innerHTML = html;
-    container.appendChild(newDiv);
+    // EJS 템플릿을 사용하여 HTML 코드 동적으로 생성
+    ejs.renderFile(path.join(__dirname, 'public', 'views', 'profile.ejs'), { profileData }, (err, html) => {
+      if (err) {
+        console.error('EJS rendering error: ', err);
+      } else {
+        // 새로운 div에 HTML 코드를 추가
+        const newDiv = document.createElement('div');
+        newDiv.classList.add('new-profile');
+        newDiv.innerHTML = html;
+        container.appendChild(newDiv);
+      }
+    });
   } else {
     console.error('JSON data is not available.');
   }
