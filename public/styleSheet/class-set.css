@@ -33,12 +33,14 @@
 .border-none {border: none;}
 .border-right {border-right: solid black 2px;}
 .border-orange {border: orange 2px solid;}
-.border-radius {border-radius: 20%;}
+.border-radious-50 {border-radius: 50%;}
 
 
 /* 폰트 */
 .fontSiez-2rem {font-size: 2rem;}
 .fontSiez-3rem {font-size: 3rem;}
+.fontSize-8rem {font-size: 4rem;}
+.fontfamily {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
 .text-shadow { text-shadow: -1px -1px 0 #FFA500, 0px -1px 0 #FFA500, 1px -1px 0 #FFA500,
   -1px 0px 0 #FFA500, 0px 0px 0 #FFA500, 1px 0px 0 #FFA500, -1px 1px 0 #FFA500,
   0px 1px 0 #FFA500, 1px 1px 0 #FFA500, -1px -1px 6px #121212,
@@ -46,9 +48,9 @@
   0px 0px 6px #121212, 1px 0px 6px #121212, -1px 1px 6px #121212,
   0px 1px 6px #121212, 1px 1px 6px #121212; }
 
-/* 색상 */
-.bgc-white {background-color: white;}
-.bgc-D9D9D9 {background-color: #d9d9d9;}
+  /* 색상 */
+  .bgc-white {background-color: white;}
+  .bgc-D9D9D9 {background-color: #d9d9d9;}
 .bgc-black {background-color: black;}
 .bgc-282828 {background-color: #282828;}
 .bgc-FFA500 {background-color: #FFA500;}
@@ -66,6 +68,7 @@
 .justify-between{justify-content: space-between;}
 .justify-end {justify-content: end;}
 .zindex-2{z-index: 2;}
+.text-center {text-align: center;}
 
 /* 커서 */
 .cursor-pointer {
