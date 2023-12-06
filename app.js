@@ -8,7 +8,7 @@ const app = express();
 const port = 9997;
 
 // 정적 파일들을 제공하기 위한 미들웨어 설정
-app.use(express.static(path.join(__dirname, 'public')));
+app.use('/public', express.static(path.join(__dirname, 'public')));
 
 // 라우트 설정
 app.use('/', route);
