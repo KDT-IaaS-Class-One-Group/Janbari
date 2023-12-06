@@ -17,10 +17,10 @@
 .height-70vh {height: 70vh;}
 .height-90vh {height: 90vh;}
 .left-5vw {left: 5vw;}
-.left-88vw {left: 88vw;}
+.left-80vw {left: 80vw;}
 .right-5vw {right: 5vw;}
 .top-0 {top: 0;}
-.top-5vw {top: 5vw;}
+.top-5vh {top: 5vw;}
 .top-33vh {top: 33vh;}
 .left-0 {left: 0;}
 .right-0 {right: 0;}
@@ -49,8 +49,8 @@
   0px 1px 6px #121212, 1px 1px 6px #121212; }
 
   /* 색상 */
-  .bgc-white {background-color: white;}
-  .bgc-D9D9D9 {background-color: #d9d9d9;}
+.bgc-white {background-color: white;}
+.bgc-D9D9D9 {background-color: #d9d9d9;}
 .bgc-black {background-color: black;}
 .bgc-282828 {background-color: #282828;}
 .bgc-FFA500 {background-color: #FFA500;}

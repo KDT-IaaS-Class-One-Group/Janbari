@@ -46,7 +46,7 @@ function handleProfileClick(profileId) {
     const newDiv = document.createElement('div');
     newDiv.classList.add('new-profile');
     newDiv.innerHTML = `
-      <div class="position-abs left-88vw top-33vh">
+      <div class="position-rel top-5vh left-80vw">
         <button class="fontSiez-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
       </div>
       <div class="display-flex flex-column width-42-5vw height-65vh">
