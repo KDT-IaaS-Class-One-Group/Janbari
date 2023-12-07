@@ -119,6 +119,10 @@ function lightMode() {
   darkModeToggleButton.classList.add('light-mode');
 
   //* #header 제어
+  var headerElement = document.getElementById('header');
+  if (headerElement) {
+    headerElement.style.backgroundColor = '#fff';
+  }
   //* #home 제어
   //* #container 제어
 }
@@ -128,7 +132,12 @@ function darkMode() {
   // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
+  
   //* #header 제어
+  var headerElement = document.getElementById('header');
+  if (headerElement) {
+    headerElement.style.backgroundColor = '#000';
+  }
   //* #home 제어
   //* #container 제어
 
