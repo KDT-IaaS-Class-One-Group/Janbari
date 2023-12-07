@@ -120,10 +120,11 @@ function lightMode() {
 
   //* #header 제어
   var headerElement = document.getElementById('header');
-  if (headerElement) {
+  if (headerElement.style.backgroundColor = '#000'){
     headerElement.style.backgroundColor = '#fff';
   }
   //* #home 제어
+  
   //* #container 제어
 }
 
@@ -135,10 +136,11 @@ function darkMode() {
   
   //* #header 제어
   var headerElement = document.getElementById('header');
-  if (headerElement) {
+  if (headerElement.style.backgroundColor = '#fff'){
     headerElement.style.backgroundColor = '#000';
   }
   //* #home 제어
+
   //* #container 제어
 
 }
