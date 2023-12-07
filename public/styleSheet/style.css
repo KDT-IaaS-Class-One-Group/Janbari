@@ -74,3 +74,13 @@ a:visited { color:white; }
   opacity: 1; /* 마우스 호버 시 투명도 증가 (선택적) */
 }
 
+#darkModeToggleButton{
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  z-index: 100;
+  right:0;
+  bottom:0;
+  margin: 10px;
+}
+
