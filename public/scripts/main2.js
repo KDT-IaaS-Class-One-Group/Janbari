@@ -96,9 +96,11 @@ homeButton.addEventListener('click', scrollToTHome)
 profileButton.addEventListener('click', scrollToTProfile)
 
 
-
+//! 토글(다크 모드 - 라이트 모드)
+// DOM 제어를 위한 토글 버튼 변수 선언
 var darkModeToggleButton = document.getElementById('darkModeToggleButton');
 
+// 클릭 이벤트로 토글 제어하는 함수
 darkModeToggleButton.addEventListener('click', () => {
   if (isDarkMode()) {
     lightMode();
@@ -112,16 +114,24 @@ lightMode();
 
 // 라이트 모드
 function lightMode() {
+  // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('dark-mode');
   darkModeToggleButton.classList.add('light-mode');
-  darkModeToggleButton.style.backgroundColor = '#fff';
+
+  //* #header 제어
+  //* #home 제어
+  //* #container 제어
 }
 
 // 다크 모드
 function darkMode() {
+  // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
-  darkModeToggleButton.style.backgroundColor = '#000';
+  //* #header 제어
+  //* #home 제어
+  //* #container 제어
+
 }
 
 // 현재 모드를 확인하는 함수
