@@ -94,3 +94,10 @@ function scrollToTProfile() {
 
 homeButton.addEventListener('click', scrollToTHome)
 profileButton.addEventListener('click', scrollToTProfile)
+
+
+// 다크 모드
+var darkModeButton = document.getElementById('darkModeButton');
+darkModeButton.addEventListener('click', () => {
+  console.log('test')
+});
