@@ -9,6 +9,7 @@ const profileElements = [
 const container = document.getElementById('container');
 let jsonData;
 
+//*  fatchData로 json을 비동기로 가져오는 작업
 async function fetchData() {
   try {
     const response = await fetch('/json');
@@ -18,6 +19,7 @@ async function fetchData() {
   }
 }
 
+//* forEach를 사용해서 json의 img를 가져온다.
 function renderProfiles() {
   profileElements.forEach(({ id, jsonKey }) => {
     const element = document.getElementById(id);
@@ -57,9 +59,9 @@ window.addEventListener('scroll', handleScroll);
 async function handleScroll() {
   const bottomOfScreen = window.innerHeight + window.scrollY;
 
-  if (!profilesRendered) {
+  if (!profilesRendered && currentProfileIndex < profileElements.length) {
     const nextProfileElement = document.getElementById(profileElements[currentProfileIndex].id);
-    const profileBottom = nextProfileElement.offsetTop + nextProfileElement.offsetHeight;
+    const profileBottom = nextProfileElement.offsetTop + nextProfileElement.offsetHeight + 50; // 추가된 여백
 
     if (bottomOfScreen > profileBottom) {
       await fetchData();
