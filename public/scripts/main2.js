@@ -48,11 +48,11 @@ function handleProfileClick(profileId) {
     newDiv.classList.add('new-profile');
     newDiv.innerHTML = `
       <div class="position-rel top-5vh left-80vw">
-        <button class="fontSiez-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
+        <button class="fontSize-2rem bgc-black border-none cursor-pointer" onclick="handleBack()">❌</button>
       </div>
       <div class="display-flex flex-column width-42-5vw height-65vh">
         <div class="display-flex justify-center align-center width-42-5vw height-10vh">
-          <h2 class="fontSiez-3rem margin-top-1vh">${profileData.name}</h2>
+          <h2 class="fontSize-3rem margin-top-1vh">${profileData.name}</h2>
         </div>  
         <div class="display-flex justify-center align-center width-42-5vw height-55vh">  
           <img class="width-20vw height-20vw border-orange" src="${profileData.img}" alt="Profile Image">
