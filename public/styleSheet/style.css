@@ -73,3 +73,4 @@ a:visited { color:white; }
 .profile:hover {
   opacity: 1; /* 마우스 호버 시 투명도 증가 (선택적) */
 }
+
