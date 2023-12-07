@@ -102,6 +102,7 @@ var darkModeToggleButton = document.getElementById('darkModeToggleButton');
 var headerElement = document.getElementById('header');
 var homeElement = document.getElementById('home');
 var introduceDiv = document.getElementById('introduce');
+var toggleImage = document.getElementsByTagName('toggleImage');
 
 /**
  * @function
@@ -131,6 +132,9 @@ function goLighter() {
   darkModeToggleButton.classList.remove('dark-mode');
   darkModeToggleButton.classList.add('light-mode');
 
+  // 이미지 변경
+  toggleImage.src = '../images/icons/light-mode.png'
+
   // #header 제어
   if (headerElement.style.backgroundColor = '#000'){
     headerElement.style.backgroundColor = '#fff';
@@ -152,6 +156,9 @@ function goDarker() {
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
   
+  // 이미지 변경
+  toggleImage.src = '../images/icons/dark-mode.png'
+
   // #header 제어
   if (headerElement.style.backgroundColor = '#fff'){
     headerElement.style.backgroundColor = '#000';
