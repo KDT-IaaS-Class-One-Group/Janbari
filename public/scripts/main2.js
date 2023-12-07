@@ -72,3 +72,19 @@ function handleBack() {
   // 예: location.reload(); 또는 contentContainer.innerHTML = '초기화면의 HTML 코드';
   location.reload(); // 페이지 새로고침을 통해 초기 상태로 돌아가는 예시
 }
+
+// header home, profile 변수
+const homeButton = document.getElementById('homeButton')
+const profileButton = document.getElementById('profileButton')
+
+// 클릭하여 스크롤로 이동하는 함수
+// * 리팩토링 필요
+function scrollToTHome() {
+  home.scrollIntoView({ behavior: 'smooth'});
+}
+function scrollToTProfile() {
+  container.scrollIntoView({ behavior: 'smooth'});
+}
+
+homeButton.addEventListener('click', scrollToTHome)
+profileButton.addEventListener('click', scrollToTProfile)
