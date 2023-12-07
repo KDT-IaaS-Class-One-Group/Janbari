@@ -2,39 +2,44 @@
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
 
 #root {
   width: 100vw;
   height: 100vh;
-  background-color: #333;
+  background-color: #fff;
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 #header {
   width: 100vw;
-  height: 100vh;
-  transition: height 1s ease; /* 높이에 대한 1초 동안의 부드러운 애니메이션을 적용합니다. */
+  transition: height 1s ease; /* 애니메이션 동작 */
   position: fixed;
   background-color: #333;
+  border: 1px dotted #fff;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
 }
+
 h1 {
   font-size: 5rem;
 }
 
 #container {
   width: 100vw;
-  height: 4000vh;
+  height: 1000vh;
+  position: relative;
   overflow-x: hidden;
+  overflow-y: scroll;
   display: flex;
 }
 
-.label {
+.index {
   width: 5vw;
   height: 30vh;
   position: fixed;
@@ -48,16 +53,24 @@ h1 {
   align-items: center;
   justify-content: space-around;
   border: 5px solid #000;
+  z-index: 3;
+}
+
+.index button {
+  margin-bottom: 10px;
 }
 
 #membersInfo {
-  width: 80vw;
-  height: 4000vh;
-  padding-top: 10vh;
+  height: 1000vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
   text-align: center;
+}
+
+h2 {
+  height: 10vh;
+  margin: 10vh;
 }
 
 .Yu,
@@ -65,11 +78,13 @@ h1 {
 .Lee,
 .Byeon {
   width: 100vw;
-  height: 1000vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
   font-size: 2rem;
-  border-bottom: 10px solid #000;
+  border: 1px solid #000;
+  scroll-margin-top: 10vh; /* 이동할 때 header가 가리는 부분을 고려하여 조정합니다. */
+
 }
 
 .Yu {
