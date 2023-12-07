@@ -79,39 +79,3 @@ a:visited { color:white; }
   opacity: 1; /* 마우스 호버 시 투명도 증가 (선택적) */
 }
 
-/* style.css */
-.new-profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 88vw;
-  top: 33vh;
-  opacity: 0; /* 초기에는 보이지 않게 설정 */
-  transition: opacity 0.5s ease-in-out; /* 부드러운 페이드 효과 */
-}
-
-.profile.active {
-  transform: translateY(0);
-}
-
-#container {
-  overflow: hidden;
-}
-
-.profile-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.profile-container.active {
-  opacity: 1;
-  transform: translateY(0);
-}

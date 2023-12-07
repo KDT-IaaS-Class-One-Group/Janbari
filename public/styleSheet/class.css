@@ -79,24 +79,4 @@
   cursor: pointer;
 }
 
-.profile.margin-2vw {
-  margin: 2vw;
-}
-
 .height-auto{height: auto;}
-
-/* style.css */
-.profile {
-  opacity: 0;
-  transform: translateY(50px); /* 초기에 아래로 숨김 처리 */
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.profile.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-#container {
-  overflow: hidden;
-}
