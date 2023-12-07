@@ -1,5 +1,6 @@
-@import url(./class.css);
-@import url(./keyframes.css);
+@import url(class.css);
+@import url(keyframes.css);
+
 * {
   margin: 0;
   padding: 0;
@@ -8,11 +9,12 @@
 
 #root {
   width: 100vw;
-  height: 100vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  overflow-y: scroll;
 }
 
 /* new-profile 스타일 지정*/
@@ -21,14 +23,7 @@
   width: 85vw;
   height: 65vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
-}
-
-/* 커서 */
-.cursor-pointer {
-  cursor: pointer;
 }
 
 #header{
@@ -38,7 +33,7 @@
 }
 
 #header h1 {
-  font-size: 100px;
+  font-size: 50px;
   line-height: 0.75;
   margin-top: 5px;
   color: #000;
@@ -56,7 +51,6 @@
   will-change: transform;
 }
 
-
 /* 링크 클릭전 하얀색 링크 클릭 후 하얀색 */
 a { color: white }
 a:visited { color:white; }
@@ -71,3 +65,53 @@ a:visited { color:white; }
   font-size: 1.3rem;
 }
 
+.profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: cover;
+  cursor: pointer;
+  opacity: 0.7; /* 투명도 속성 추가 (선택적) */
+  transition: opacity 0.3s ease; /* 투명도 전환 효과 (선택적) */
+}
+
+.profile:hover {
+  opacity: 1; /* 마우스 호버 시 투명도 증가 (선택적) */
+}
+
+/* style.css */
+.new-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 88vw;
+  top: 33vh;
+  opacity: 0; /* 초기에는 보이지 않게 설정 */
+  transition: opacity 0.5s ease-in-out; /* 부드러운 페이드 효과 */
+}
+
+.profile.active {
+  transform: translateY(0);
+}
+
+#container {
+  overflow: hidden;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.profile-container.active {
+  opacity: 1;
+  transform: translateY(0);
+}
