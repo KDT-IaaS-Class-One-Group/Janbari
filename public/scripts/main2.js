@@ -133,7 +133,7 @@ function goLighter() {
   darkModeToggleButton.classList.add('light-mode');
 
   // 이미지 변경
-  toggleImage.src = '../images/icons/light-mode.png'
+  toggleImage.src = '/public/images/icons/light-mode.png'
 
   // #header 제어
   if (headerElement.style.backgroundColor = '#000'){
@@ -157,7 +157,7 @@ function goDarker() {
   darkModeToggleButton.classList.add('dark-mode');
   
   // 이미지 변경
-  toggleImage.src = '../images/icons/dark-mode.png'
+  toggleImage.src = 'public/images/icons/dark-mode.png'
 
   // #header 제어
   if (headerElement.style.backgroundColor = '#fff'){
