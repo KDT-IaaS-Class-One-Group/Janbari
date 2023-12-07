@@ -96,69 +96,79 @@ homeButton.addEventListener('click', scrollToTHome)
 profileButton.addEventListener('click', scrollToTProfile)
 
 
-//! 토글(다크 모드 - 라이트 모드)
-// DOM 제어를 위한 토글 버튼 변수 선언
+//! 버튼 기능
+// DOM 제어를 위한 전역 변수 선언 모음
 var darkModeToggleButton = document.getElementById('darkModeToggleButton');
+var headerElement = document.getElementById('header');
+var homeElement = document.getElementById('home');
+var introduceDiv = document.getElementById('introduce');
 
-// 클릭 이벤트로 토글 제어하는 함수
+/**
+ * @function
+ * @description 클릭에 따라 다크 모드와 라이트 모드를 토글하는 함수
+ */
 darkModeToggleButton.addEventListener('click', () => {
+  // 현재 상태가 라이트 모드이면
   if (isLight()) {
+    // 다크 모드로 변경
     goDarker();
   } else {
+    // 라이트 모드로 변경
     goLighter();
   }
 });
 
-// 초기 상태 설정
+// 초기 상태를 라이트 모드로 설정
 goLighter();
 
-// 라이트 모드
+/**
+ * @function
+ * @description 라이트 모드로 설정하는 함수
+ * - #header와 #home을 제어한다.
+ */
 function goLighter() {
   // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('dark-mode');
   darkModeToggleButton.classList.add('light-mode');
 
-  //* #header 제어
-  var headerElement = document.getElementById('header');
+  // #header 제어
   if (headerElement.style.backgroundColor = '#000'){
     headerElement.style.backgroundColor = '#fff';
   }
-  //* #home 제어
-  var homeElement = document.getElementById('home');
+  // #home 제어
   if (homeElement.style.backgroundColor = '#2C3E50'){
     homeElement.style.backgroundColor = '#FFA500'
-    var introduceDiv = document.getElementById('introduce');
     introduceDiv.style.color = '#fff';
   }
-
-  //* #container 제어
 }
 
-// 다크 모드
+/**
+ * @function
+ * @description 다크 모드로 설정하는 함수
+ * - #header와 #home을 제어한다.
+ */
 function goDarker() {
   // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
   
-  //* #header 제어
-  var headerElement = document.getElementById('header');
+  // #header 제어
   if (headerElement.style.backgroundColor = '#fff'){
     headerElement.style.backgroundColor = '#000';
 
   }
-  //* #home 제어
-  var homeElement = document.getElementById('home');
+  // #home 제어
   if (homeElement.style.backgroundColor = '#FFA500'){
     homeElement.style.backgroundColor = '#2C3E50'
-    var introduceDiv = document.getElementById('introduce');
     introduceDiv.style.color = '#000';
   }
-    
-  //* #container 제어
-
 }
 
-// 현재 모드를 확인하는 함수
+/**
+ * @function
+ * @description 현재 상태가 라이트 모드인지 확인하는 함수
+ * @returns {boolean} 라이트 모드일 경우 true, 아니면 false
+ */
 function isLight() {
   return darkModeToggleButton.classList.contains('light-mode');
 }
