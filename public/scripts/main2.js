@@ -96,8 +96,35 @@ homeButton.addEventListener('click', scrollToTHome)
 profileButton.addEventListener('click', scrollToTProfile)
 
 
-// 다크 모드
-var darkModeButton = document.getElementById('darkModeButton');
-darkModeButton.addEventListener('click', () => {
-  console.log('test')
+
+var darkModeToggleButton = document.getElementById('darkModeToggleButton');
+
+darkModeToggleButton.addEventListener('click', () => {
+  if (isDarkMode()) {
+    lightMode();
+  } else {
+    darkMode();
+  }
 });
+
+// 초기 상태 설정
+lightMode();
+
+// 라이트 모드
+function lightMode() {
+  darkModeToggleButton.classList.remove('dark-mode');
+  darkModeToggleButton.classList.add('light-mode');
+  darkModeToggleButton.style.backgroundColor = '#fff';
+}
+
+// 다크 모드
+function darkMode() {
+  darkModeToggleButton.classList.remove('light-mode');
+  darkModeToggleButton.classList.add('dark-mode');
+  darkModeToggleButton.style.backgroundColor = '#000';
+}
+
+// 현재 모드를 확인하는 함수
+function isDarkMode() {
+  return darkModeToggleButton.classList.contains('dark-mode');
+}
