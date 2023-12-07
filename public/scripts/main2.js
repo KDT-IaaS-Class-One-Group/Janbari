@@ -102,18 +102,18 @@ var darkModeToggleButton = document.getElementById('darkModeToggleButton');
 
 // 클릭 이벤트로 토글 제어하는 함수
 darkModeToggleButton.addEventListener('click', () => {
-  if (isDarkMode()) {
-    lightMode();
+  if (isLight()) {
+    goDarker();
   } else {
-    darkMode();
+    goLighter();
   }
 });
 
 // 초기 상태 설정
-lightMode();
+goLighter();
 
 // 라이트 모드
-function lightMode() {
+function goLighter() {
   // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('dark-mode');
   darkModeToggleButton.classList.add('light-mode');
@@ -124,12 +124,18 @@ function lightMode() {
     headerElement.style.backgroundColor = '#fff';
   }
   //* #home 제어
-  
+  var homeElement = document.getElementById('home');
+  if (homeElement.style.backgroundColor = '#2C3E50'){
+    homeElement.style.backgroundColor = '#FFA500'
+    var introduceDiv = document.getElementById('introduce');
+    introduceDiv.style.color = '#fff';
+  }
+
   //* #container 제어
 }
 
 // 다크 모드
-function darkMode() {
+function goDarker() {
   // darkModeToggleButton의 클래스를 조작
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
@@ -138,14 +144,21 @@ function darkMode() {
   var headerElement = document.getElementById('header');
   if (headerElement.style.backgroundColor = '#fff'){
     headerElement.style.backgroundColor = '#000';
+
   }
   //* #home 제어
-
+  var homeElement = document.getElementById('home');
+  if (homeElement.style.backgroundColor = '#FFA500'){
+    homeElement.style.backgroundColor = '#2C3E50'
+    var introduceDiv = document.getElementById('introduce');
+    introduceDiv.style.color = '#000';
+  }
+    
   //* #container 제어
 
 }
 
 // 현재 모드를 확인하는 함수
-function isDarkMode() {
-  return darkModeToggleButton.classList.contains('dark-mode');
+function isLight() {
+  return darkModeToggleButton.classList.contains('light-mode');
 }
