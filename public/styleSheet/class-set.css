@@ -1,0 +1,79 @@
+/* 너비, 높이, 여백 */
+.width-200px {width: 200px;}
+.height-200px {height: 200px;}
+.width-10vw {width: 10vw;}
+.width-20vw {width: 20vw;}
+.width-42-5vw {width: 42.5vw;}
+.width-45vw {width: 45vw;}
+.width-90vw {width: 90vw;}
+.width-100vw {width:100vw;}
+.height-10vw {height: 10vw;}
+.height-10vh {height: 10vh;}
+.height-20vh {height: 20vh;}
+.height-20vw {height: 20vw;}
+.height-32-5vh {height: 32.5vh;}
+.height-35vh {height: 35vh;}
+.height-55vh {height: 55vh;}
+.height-65vh {height: 65vh;}
+.height-70vh {height: 70vh;}
+.height-90vh {height: 90vh;}
+.height-100vh {height: 100vh;}
+.left-5vw {left: 5vw;}
+.left-80vw {left: 80vw;}
+.right-5vw {right: 5vw;}
+.top-0 {top: 0;}
+.top-5vw {top: 5vw;}
+.top-33vh {top: 33vh;}
+.left-0 {left: 0;}
+.right-0 {right: 0;}
+.bottom-5vw {bottom: 5vw;}
+.margin-2vw {margin: 2vw;}
+.margin-top-1vh {margin-top: 10vh;}
+.margin-right-5vw {margin-right: 5vw;}
+
+/* 외각선 스타일 */
+.border-none {border: none;}
+.border-right {border-right: solid black 2px;}
+.border-orange {border: orange 2px solid;}
+.border-radious-50 {border-radius: 50%;}
+
+
+/* 폰트 */
+.fontSize-2rem {font-size: 2rem;}
+.fontSize-8rem {font-size: 4rem;}
+.fontSize-24px {font-size: 24px;}
+.fontfamily {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
+.text-shadow { text-shadow: -1px -1px 0 #FFA500, 0px -1px 0 #FFA500, 1px -1px 0 #FFA500,
+  -1px 0px 0 #FFA500, 0px 0px 0 #FFA500, 1px 0px 0 #FFA500, -1px 1px 0 #FFA500,
+  0px 1px 0 #FFA500, 1px 1px 0 #FFA500, -1px -1px 6px #121212,
+  0px -1px 6px #121212, 1px -1px 6px #121212, -1px 0px 6px #121212,
+  0px 0px 6px #121212, 1px 0px 6px #121212, -1px 1px 6px #121212,
+  0px 1px 6px #121212, 1px 1px 6px #121212; }
+
+  /* 색상 */
+.bgc-white {background-color: white;}
+.bgc-D9D9D9 {background-color: #d9d9d9;}
+.bgc-black {background-color: black;}
+.bgc-282828 {background-color: #282828;}
+.bgc-FFA500 {background-color: #FFA500;}
+.color-white {color: white;}
+
+/* 위치 */
+.display-flex {display: flex;}
+.position-rel {position: relative;}
+.position-abs {position: absolute;}
+.position-fix {position: fixed;}
+.position-sticky {position: sticky;}
+.flex-column {flex-direction: column;}
+.justify-center {justify-content: center;}
+.align-center {align-items: center;}
+.justify-between{justify-content: space-between;}
+.justify-evenly{justify-content: space-evenly;}
+.justify-end {justify-content: end;}
+.zindex-2{z-index: 2;}
+.text-center {text-align: center;}
+
+/* 커서 */
+.cursor-pointer {
+  cursor: pointer;
+}
