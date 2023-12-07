@@ -39,9 +39,9 @@
 
 
 /* 폰트 */
-.fontSiez-2rem {font-size: 2rem;}
-.fontSiez-3rem {font-size: 3rem;}
+.fontSize-2rem {font-size: 2rem;}
 .fontSize-8rem {font-size: 4rem;}
+.fontSize-24px {font-size: 24px;}
 .fontfamily {font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
 .text-shadow { text-shadow: -1px -1px 0 #FFA500, 0px -1px 0 #FFA500, 1px -1px 0 #FFA500,
   -1px 0px 0 #FFA500, 0px 0px 0 #FFA500, 1px 0px 0 #FFA500, -1px 1px 0 #FFA500,
