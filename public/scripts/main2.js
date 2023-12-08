@@ -7,6 +7,11 @@ const home = document.getElementById('home');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
+//프로필을 담고 있는 컨테이너
+const containerBox1 = container.children[0]
+const containerBox2 = container.children[1]
+console.log(containerBox1)
+
 // 프로필 생성 함수
 function createProfile(element, profileKey) {
   // 프로필 엘리먼트에 배경 이미지 설정
@@ -166,6 +171,7 @@ function goDarker() {
   // #header 제어
   if (headerElement.style.backgroundColor = '#fff'){
     headerElement.style.backgroundColor = '#000';
+    container.style.backgroundColor='#fff';
 
   }
   // #home 제어
