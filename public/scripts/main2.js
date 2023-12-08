@@ -7,6 +7,11 @@ const home = document.getElementById('home');
 const initialHTML = container.innerHTML;
 let jsonData; // JSON 데이터를 저장할 변수
 
+//프로필을 담고 있는 컨테이너
+var containerBox1 = container.children[0]
+var containerBox2 = container.children[1]
+console.log(containerBox1)
+
 // 프로필 생성 함수
 function createProfile(element, profileKey) {
   // 프로필 엘리먼트에 배경 이미지 설정
@@ -136,7 +141,7 @@ function goLighter() {
   // 배경색
   // darkModeToggleButton.style.backgroundColor = ''
   // innerHTML
-  darkModeToggleButton.innerHTML = '🌝'
+  darkModeToggleButton.innerHTML = '🌚'
 
   // #header 제어
   headerElement.style.backgroundColor = '#fff';
@@ -144,6 +149,13 @@ function goLighter() {
   // #home 제어
   homeElement.style.backgroundColor = '#FFA500'
   introduceDiv.style.color = '#fff';
+
+  // #container 제어
+  container.style.backgroundColor='#fff';
+  containerBox1.style.backgroundColor='#fff';
+  containerBox2.style.backgroundColor='#fff';
+  containerBox1.style.color='#000';
+  containerBox2.style.color='#000';
   }
 
 /**
@@ -160,14 +172,21 @@ function goDarker() {
   // 배경색
   // darkModeToggleButton.backgroundColor = '#FFA500'
   // innerHTML
-  darkModeToggleButton.innerHTML = '🌚'
+  darkModeToggleButton.innerHTML = '🌝'
 
   // #header 제어
   headerElement.style.backgroundColor = '#000';
-
+  
   // #home 제어
-  homeElement.style.backgroundColor = '#2C3E50'
+  homeElement.style.backgroundColor = '#222222'
   introduceDiv.style.color = '#000';
+
+  // #container 제어
+  container.style.backgroundColor='#000';
+  containerBox1.style.backgroundColor='#000';
+  containerBox2.style.backgroundColor='#000';
+  containerBox1.style.color='#fff';
+  containerBox2.style.color='#fff';
 }
 
 /**
