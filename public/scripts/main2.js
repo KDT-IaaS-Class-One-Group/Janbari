@@ -147,7 +147,9 @@ function goLighter() {
   headerElement.style.backgroundColor = '#fff';
   
   // #home 제어
+  // 배경색
   homeElement.style.backgroundColor = '#FFA500'
+  // 폰트
   introduceDiv.style.color = '#fff';
 
   // #container 제어
@@ -178,7 +180,9 @@ function goDarker() {
   headerElement.style.backgroundColor = '#000';
   
   // #home 제어
-  homeElement.style.backgroundColor = '#222222'
+  // 배경색
+  homeElement.style.backgroundColor = '#576d80'
+  // 폰트
   introduceDiv.style.color = '#000';
 
   // #container 제어
