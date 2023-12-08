@@ -151,6 +151,7 @@ function goLighter() {
     homeElement.style.backgroundColor = '#FFA500'
     introduceDiv.style.color = '#fff';
   }
+
 }
 
 /**
@@ -171,7 +172,11 @@ function goDarker() {
   // #header 제어
   if (headerElement.style.backgroundColor = '#fff'){
     headerElement.style.backgroundColor = '#000';
-    container.style.backgroundColor='#fff';
+    container.style.backgroundColor='#000';
+    containerBox1.style.backgroundColor='#000';
+    containerBox2.style.backgroundColor='#000';
+    containerBox1.style.color='#fff';
+    containerBox2.style.color='#fff';
 
   }
   // #home 제어
