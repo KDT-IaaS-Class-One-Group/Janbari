@@ -132,21 +132,19 @@ function goLighter() {
   darkModeToggleButton.classList.remove('dark-mode');
   darkModeToggleButton.classList.add('light-mode');
 
-  // 버튼 배경색 변경
-  if (darkModeToggleButton.style.backgroundColor = '#fff'){
-    darkModeToggleButton.style.backgroundColor = '#000'
-  }
+  // 버튼 제어
+  // 배경색
+  // darkModeToggleButton.style.backgroundColor = ''
+  // innerHTML
+  darkModeToggleButton.innerHTML = '🌝'
 
   // #header 제어
-  if (headerElement.style.backgroundColor = '#000'){
-    headerElement.style.backgroundColor = '#fff';
-  }
+  headerElement.style.backgroundColor = '#fff';
+  
   // #home 제어
-  if (homeElement.style.backgroundColor = '#2C3E50'){
-    homeElement.style.backgroundColor = '#FFA500'
-    introduceDiv.style.color = '#fff';
+  homeElement.style.backgroundColor = '#FFA500'
+  introduceDiv.style.color = '#fff';
   }
-}
 
 /**
  * @function
@@ -158,21 +156,18 @@ function goDarker() {
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
   
-  // 버튼 배경색 변경
-  if (darkModeToggleButton.style.backgroundColor = '#000'){
-    darkModeToggleButton.style.backgroundColor = '#fff'
-  }
+  // 버튼 제어
+  // 배경색
+  // darkModeToggleButton.backgroundColor = '#FFA500'
+  // innerHTML
+  darkModeToggleButton.innerHTML = '🌚'
 
   // #header 제어
-  if (headerElement.style.backgroundColor = '#fff'){
-    headerElement.style.backgroundColor = '#000';
+  headerElement.style.backgroundColor = '#000';
 
-  }
   // #home 제어
-  if (homeElement.style.backgroundColor = '#FFA500'){
-    homeElement.style.backgroundColor = '#2C3E50'
-    introduceDiv.style.color = '#000';
-  }
+  homeElement.style.backgroundColor = '#2C3E50'
+  introduceDiv.style.color = '#000';
 }
 
 /**
