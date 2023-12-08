@@ -75,12 +75,23 @@ a:visited { color:white; }
 }
 
 #darkModeToggleButton{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   z-index: 100;
   right:0;
   bottom:0;
-  margin: 10px;
+  margin-right: 1.5rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.5;
+  border: none;
 }
 
+#toggleImage {
+  width: 50px;
+  height: 50px;
+}
+
+#toggleImage:hover {
+  opacity: 0.1;
+}
