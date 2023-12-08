@@ -83,8 +83,10 @@ a:visited { color:white; }
   bottom:0;
   margin-right: 1.5rem;
   margin-bottom: 1.5rem;
-  opacity: 0.5;
+  opacity: 0.7;
   border: none;
+  font-size: 30px;
+  background-color: transparent;
 }
 #darkModeToggleButton:hover{
   opacity: 0.3;
