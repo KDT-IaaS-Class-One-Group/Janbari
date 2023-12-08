@@ -132,8 +132,10 @@ function goLighter() {
   darkModeToggleButton.classList.remove('dark-mode');
   darkModeToggleButton.classList.add('light-mode');
 
-  // 이미지 변경
-  toggleImage();
+  // 버튼 배경색 변경
+  if (darkModeToggleButton.style.backgroundColor = '#fff'){
+    darkModeToggleButton.style.backgroundColor = '#000'
+  }
 
   // #header 제어
   if (headerElement.style.backgroundColor = '#000'){
@@ -156,8 +158,10 @@ function goDarker() {
   darkModeToggleButton.classList.remove('light-mode');
   darkModeToggleButton.classList.add('dark-mode');
   
-  // 이미지 변경
-  toggleImage();
+  // 버튼 배경색 변경
+  if (darkModeToggleButton.style.backgroundColor = '#000'){
+    darkModeToggleButton.style.backgroundColor = '#fff'
+  }
 
   // #header 제어
   if (headerElement.style.backgroundColor = '#fff'){
@@ -178,24 +182,4 @@ function goDarker() {
  */
 function isLight() {
   return darkModeToggleButton.classList.contains('light-mode');
-}
-
-// 이미지 객체를 저장할 변수 선언
-var darkModeImage = new Image();
-var lightModeImage = new Image();
-
-// 이미지 객체 초기화
-darkModeImage.src = '/public/images/icons/dark-mode.png'
-lightModeImage.src = '/public/images/icons/light-mode.png'
-
-// 토글 함수
-function toggleImage(){
-  // 현재 이미지 객체를 저장
-  var currentImage = toggleImage.src;
-
-  // 현재 이미지 객체를 토글
-  toggleImage.src = toggleImage.src === darkModeImage.src ? lightModeImage.src : darkModeImage.src;
-
-  // 토글 버튼의 onclick 이벤트에 핸들러 함수를 연결
-  toggleImage.onclick = toggleImage();
 }
