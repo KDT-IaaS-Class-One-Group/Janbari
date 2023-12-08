@@ -7,10 +7,13 @@ const fs = require('fs');
 
 // 정적 파일 서빙 설정
 router.use('/public', express.static(path.join(__dirname, '..', 'public')));
+// 이미지 파일 별도 라우팅 처리
+router.use('/images', express.static(path.join(__dirname, '..', 'images')));
+router.use('/images/icons', express.static(path.join(__dirname, '..', 'images', 'icons')));
 
 // 라우트 설정
 router.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', 'public', 'views', 'index.html')); // 수정
+  res.sendFile(path.join(__dirname, '..', 'public', 'views', 'index.html'));
 })
 
 // json 
